@@ -1,0 +1,192 @@
+﻿/* ============================================================
+   THEME · RETRO VINTAGE PRINT
+   Aged paper, letterpress type, rubber stamps, double rules.
+   Palette preserved. Distinct from every other theme.
+   ============================================================ */
+
+:root {
+  --radius: 2px;
+  --radius-sm: 2px;
+  --font-head: Georgia, 'Times New Roman', serif;
+  --shadow-sm: 2px 2px 0 rgba(74, 14, 30, .08);
+  --shadow-md: 4px 4px 0 rgba(74, 14, 30, .12);
+  --shadow-lg: 6px 6px 0 rgba(74, 14, 30, .16);
+  --shadow-gold: 3px 3px 0 rgba(214, 155, 47, .4);
+}
+
+/* ---------- Paper grain overlay ---------- */
+body { background: var(--light); }
+body::before {
+  content: ""; position: fixed; inset: 0; z-index: 9997; pointer-events: none;
+  background:
+    repeating-linear-gradient(0deg, rgba(74, 14, 30, .02) 0 1px, transparent 1px 3px),
+    repeating-linear-gradient(90deg, rgba(74, 14, 30, .012) 0 1px, transparent 1px 4px);
+}
+
+/* ---------- Letterpress typography ---------- */
+h1, h2, h3, h4, h5, h6 { font-weight: 700; letter-spacing: .01em; }
+.eyebrow {
+  letter-spacing: 3px; color: var(--royal-2);
+  background: rgba(252, 249, 243, .7);
+  border-width: 1.5px; border-style: dashed; border-color: var(--royal-2); border-radius: 6px;
+  padding: 5px 12px; transform: rotate(-.5deg);
+}
+.eyebrow::before { display: none; }
+.section-title { font-style: normal; }
+.section-title::after { height: 2px; background: var(--gold-2); border-radius: 0; box-shadow: 0 4px 0 rgba(214, 155, 47, .3); }
+
+/* ---------- Cards: aged ivory panels ---------- */
+.card-premium {
+  background: var(--white);
+  border: 1px solid rgba(74, 14, 30, .16); border-radius: 2px;
+  border-top-width: 3px; border-top-style: double; border-top-color: var(--gold-2);
+  box-shadow: 3px 3px 0 rgba(74, 14, 30, .06), inset 0 0 0 1px rgba(214, 155, 47, .12);
+}
+.card-premium:hover { transform: translate(-1px, -1px); box-shadow: 5px 5px 0 rgba(74, 14, 30, .1); }
+.card-premium .card-icon {
+  border-radius: 2px; background: transparent; color: var(--gold-2);
+  border-width: 1.5px; border-style: dashed; border-color: var(--gold-2); font-size: 22px;
+}
+.card-premium:hover .card-icon { background: var(--gold-2); color: var(--navy); transform: rotate(0) scale(1.04); }
+
+/* ---------- Stat cards ---------- */
+.stat-card {
+  background: var(--white); border: 1px solid rgba(74, 14, 30, .16); border-radius: 2px;
+  border-top-width: 4px; border-top-style: double; border-top-color: var(--gold-2); box-shadow: 3px 3px 0 rgba(74, 14, 30, .08);
+}
+.stat-card:hover { transform: translate(-1px, -1px); box-shadow: 5px 5px 0 rgba(74, 14, 30, .12); }
+.stat-num { font-family: var(--font-head); color: var(--navy); }
+
+/* ---------- Buttons: letterpress blocks ---------- */
+.btn-premium, .btn-navy, .btn-outline-premium, .btn-ghost {
+  border-radius: 2px !important; text-transform: uppercase; letter-spacing: 1.5px; font-size: 13px; font-weight: 700;
+}
+.btn-premium { background: var(--gold-2); color: var(--navy); border-width: 1px; border-style: solid; border-color: var(--navy); box-shadow: 3px 3px 0 var(--navy); }
+.btn-premium:hover { transform: translate(-1px, -1px); box-shadow: 5px 5px 0 var(--navy); color: var(--navy); }
+.btn-navy { background: var(--navy); border-width: 1px; border-style: solid; border-color: var(--navy); box-shadow: 3px 3px 0 var(--royal-2); }
+.btn-navy:hover { transform: translate(-1px, -1px); box-shadow: 5px 5px 0 var(--royal-2); }
+.btn-outline-premium { background: transparent; border: 1px dashed rgba(255, 255, 255, .75); color: #fff; }
+.btn-outline-premium:hover { background: var(--gold-2); color: var(--navy); border-width: 1px; border-style: dashed; border-color: var(--navy); }
+.btn-ghost { background: transparent; color: var(--royal-2); border: none; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: var(--gold-2); border-radius: 0 !important; }
+.btn-ghost:hover { background: transparent; color: var(--royal); border-bottom-color: var(--royal-2); }
+
+/* ---------- Navbar ---------- */
+.navbar-main { background: var(--white); box-shadow: none; border-bottom-width: 3px; border-bottom-style: double; border-bottom-color: var(--gold-2); }
+.navbar-main .nav-link { font-family: var(--font-head); font-size: 14px; letter-spacing: 1px; text-transform: uppercase; }
+.navbar-main .nav-link::after { height: 2px; background: var(--gold-2); border-radius: 0; }
+.brand-text b { font-family: var(--font-head); letter-spacing: .5px; }
+.brand-text small { letter-spacing: 2.5px; }
+.dropdown-menu { border-radius: 2px; border: 1px solid rgba(74, 14, 30, .25); }
+.nav-cta { border-radius: 2px; border-width: 1px; border-style: solid; border-color: var(--navy); }
+.icon-btn, .portal-btn { border-radius: 2px; }
+.offcanvas .nav-link { border-bottom: 1px solid rgba(74, 14, 30, .15); }
+
+/* ---------- Hero ---------- */
+.hero::before { background: linear-gradient(100deg, rgba(58, 11, 22, .96), rgba(74, 14, 30, .9) 55%, rgba(74, 14, 30, .72)); }
+.hero-badge { border-radius: 4px; background: rgba(74, 14, 30, .55); border: 1.5px dashed rgba(233, 184, 76, .75); letter-spacing: 1.5px; text-transform: uppercase; font-size: 12px; }
+.hero-divider::before, .hero-divider::after { width: 60px; height: 0; background: none; border-top-width: 2px; border-top-style: dashed; border-top-color: var(--gold); }
+.hero h1 { letter-spacing: 1px; }
+.hero-trust b { font-family: var(--font-head); }
+.hero-trust span { letter-spacing: 2px; }
+.hero-scroll { letter-spacing: 3px; text-transform: uppercase; }
+.mouse { border-radius: 8px; border-color: rgba(255, 255, 255, .6); }
+.mouse::after { border-radius: 2px; background: var(--gold); }
+.crest-card {
+  background: rgba(58, 11, 22, .55); border-width: 2px; border-style: solid; border-color: var(--gold); border-radius: 2px;
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, .35);
+}
+.crest-card .corner { border-radius: 0; border-width: 2px; }
+.crest-title { letter-spacing: 1.5px; font-weight: 800; }
+.crest-sub { letter-spacing: 4px; }
+.crest-rule { height: 1px; background: var(--gold); border-radius: 0; }
+.crest-motto { font-style: italic; }
+.float-chip { border-radius: 2px; background: rgba(252, 249, 243, .92); color: var(--navy); border-width: 1px; border-style: solid; border-color: var(--navy); box-shadow: 3px 3px 0 rgba(0, 0, 0, .3); font-family: var(--font-head); }
+.float-chip i { color: var(--gold-2); }
+.float-chip .num { color: var(--gold-2); }
+
+/* ---------- Timeline ---------- */
+.timeline::before { width: 0; background: none; border-left-width: 2px; border-left-style: dashed; border-left-color: var(--royal-3); }
+.tl-item .dot { border-radius: 0; transform: rotate(45deg); background: var(--gold-2); border-width: 3px; border-style: solid; border-color: var(--white); box-shadow: 0 0 0 3px var(--royal-2); }
+.tl-card { background: var(--white); border: 1px solid rgba(74, 14, 30, .16); border-radius: 2px; box-shadow: 3px 3px 0 rgba(74, 14, 30, .07); }
+.tl-card .year { font-family: var(--font-head); color: var(--gold-2); }
+.tl-card:hover { transform: translate(-1px, -1px); box-shadow: 5px 5px 0 rgba(74, 14, 30, .1); }
+
+/* ---------- Notice / events ---------- */
+.notice-item { background: var(--white); border: 1px solid rgba(74, 14, 30, .16); border-radius: 2px; box-shadow: 2px 2px 0 rgba(74, 14, 30, .05); }
+.notice-item:hover { transform: translateX(4px); box-shadow: 4px 4px 0 rgba(74, 14, 30, .09); }
+.notice-date { background: rgba(252, 249, 243, .75); color: var(--navy); border-width: 2px; border-style: dashed; border-color: var(--royal-2); border-radius: 2px; }
+.notice-date b { color: var(--navy); font-family: var(--font-head); }
+.notice-date small { color: var(--royal-2); }
+.event-date-box { background: var(--white); color: var(--navy); border-width: 2px; border-style: dashed; border-color: var(--royal-2); border-radius: 2px; box-shadow: none; }
+.event-date-box b { color: var(--navy); font-family: var(--font-head); }
+.event-date-box small { color: var(--royal-2); }
+.cd-box { background: var(--navy); border-width: 1px; border-style: solid; border-color: var(--gold-2); border-radius: 2px; }
+
+/* ---------- Testimonials ---------- */
+.testimonial-card { background: var(--white); border: 1px solid rgba(74, 14, 30, .16); border-radius: 2px; box-shadow: 3px 3px 0 rgba(74, 14, 30, .06); }
+.testimonial-card:hover { box-shadow: 5px 5px 0 rgba(74, 14, 30, .1); }
+.testimonial-card .avatar { border-radius: 0; border-width: 2px; border-style: solid; border-color: var(--gold-2); }
+.carousel-control-custom { border-radius: 2px; }
+
+/* ---------- CTA band ---------- */
+.cta-band { background: var(--navy); border-width: 3px; border-style: double; border-color: var(--gold); border-radius: 2px; box-shadow: 6px 6px 0 rgba(0, 0, 0, .2); }
+.cta-band::before, .cta-band::after { opacity: .35; filter: blur(20px); }
+.cta-band h2 { letter-spacing: 1px; }
+
+/* ---------- Section alt: print rule ---------- */
+.section-alt { background: #F6EFDF; }
+.section-alt::before { background: none; border-top: 2px dashed rgba(214, 155, 47, .5); height: 0; top: 8px; opacity: .8; }
+
+/* ---------- Marquee ---------- */
+.marquee-track span { font-family: var(--font-head); text-transform: uppercase; letter-spacing: 2.5px; color: var(--navy); }
+.marquee-strip { background: var(--white); }
+
+/* ---------- Ticker ---------- */
+.ticker { background: var(--navy); }
+.ticker .label { border-radius: 2px; background: var(--gold-2); color: var(--navy); border-width: 1px; border-style: solid; border-color: var(--navy); font-family: var(--font-head); letter-spacing: 1.5px; }
+
+/* ---------- Pills / profile ---------- */
+.pill { border-radius: 2px; border: 1px solid rgba(74, 14, 30, .3); }
+.pill.active { background: var(--navy); color: #fff; box-shadow: 3px 3px 0 rgba(74, 14, 30, .25); }
+.profile-avatar { border-radius: 0; border-width: 3px; border-style: solid; border-color: var(--gold-2); box-shadow: 4px 4px 0 rgba(74, 14, 30, .15); }
+.profile-card:hover .profile-avatar { transform: scale(1.04) rotate(-3deg); }
+
+/* ---------- Check list ---------- */
+.check-list li::before { content: "✔"; background: transparent; color: var(--gold-2); border-width: 1.5px; border-style: solid; border-color: var(--gold-2); border-radius: 0; }
+
+/* ---------- Images / glass ---------- */
+.img-card { border-radius: 2px; }
+.img-frame { border-radius: 2px; box-shadow: 6px 6px 0 rgba(74, 14, 30, .12); }
+.glass-card { background: rgba(252, 249, 243, .85); border: 1px solid rgba(74, 14, 30, .18); border-radius: 2px; }
+.exp-badge { border-radius: 2px; background: var(--gold-2); color: var(--navy); border-width: 2px; border-style: solid; border-color: var(--navy); box-shadow: 4px 4px 0 var(--navy); }
+
+/* ---------- Footer ---------- */
+.footer::after { height: 4px; background: var(--gold-2); }
+.footer h5 { text-transform: uppercase; letter-spacing: 2px; }
+.footer h5::after { height: 2px; background: var(--gold-2); border-radius: 0; }
+.footer-seal-rule { height: 1px; background: linear-gradient(90deg, transparent, var(--gold-2), transparent); }
+.footer-motto { letter-spacing: 4px; }
+.footer-social a { border-radius: 0; border: 1px solid rgba(255, 255, 255, .35); background: transparent; }
+
+/* ---------- Page hero ---------- */
+.page-hero::before { background: linear-gradient(120deg, rgba(58, 11, 22, .95), rgba(74, 14, 30, .9)); }
+.page-hero .crumbs { border-radius: 2px; background: rgba(74, 14, 30, .5); border: 1px dashed rgba(233, 184, 76, .7); letter-spacing: 1px; text-transform: uppercase; font-size: 12px; }
+
+/* ---------- Forms / tables / accordion ---------- */
+.form-premium .form-control, .form-premium .form-select { background: var(--white); border: 1.5px solid rgba(74, 14, 30, .3); border-radius: 2px; }
+.form-premium .form-control:focus { border-color: var(--gold-2); box-shadow: 0 0 0 3px rgba(214, 155, 47, .18); }
+.accordion-premium .accordion-item { border-radius: 2px !important; }
+.accordion-premium .accordion-button { font-family: var(--font-head); }
+.table-premium { border-radius: 2px; }
+.table-premium th { font-family: var(--font-head); letter-spacing: 1px; }
+
+/* ---------- Chat / float ---------- */
+.chat-window, .msg, .chat-head .bot-avatar, .chat-input button, .chat-quick button { border-radius: 2px !important; }
+.bot-avatar { background: var(--gold-2) !important; color: var(--navy) !important; }
+.back-top { border-radius: 2px; background: var(--gold-2); }
+.fab-btn { border-radius: 2px; }
+.fab-menu { background: var(--navy); }
+.fab .quick-menu { border-radius: 2px; }
+.fab .quick-menu a { border-radius: 2px; }
+.btn-circle { border-radius: 0; }
+.message-card { border-radius: 2px; }

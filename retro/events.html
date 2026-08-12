@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+(function () {
+  document.addEventListener("click", function (e) {
+    var el = e.target && e.target.closest ? e.target.closest("[data-theme-toggle]") : null;
+    if (!el) return;
+    var next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    var icons = document.querySelectorAll("[data-theme-toggle] i");
+    for (var i = 0; i < icons.length; i++) icons[i].className = next === "dark" ? "fa-solid fa-sun" : "fa-solid fa-moon";
+  });
+})();
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Events | St. Francis School</title>
+  <meta name="description" content="Upcoming and past events at St. Francis School — sports day, science exhibitions, cultural fests and more.">
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.16/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/theme-retro.css">
+</head>
+<body>
+
+  <header data-component></header>
+
+  <main>
+    <section class="page-hero">
+      <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=2070&auto=format&fit=crop')"></div>
+      <div class="container">
+        <h1 class="reveal">School Events</h1>
+        <div class="crumbs reveal delay-1 mt-4"><a href="index.html">Home</a><span class="sep">/</span><span>Events</span></div>
+      </div>
+    </section>
+
+    <!-- Countdown hero -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-band reveal-zoom text-center">
+          <span class="eyebrow justify-content-center" style="color:#E9B84C">Next Big Event</span>
+          <h2 class="display-6 fw-bold mb-2">Annual Sports Day 2026</h2>
+          <p class="mb-4">12 March 2026 - 9:00 AM, Main Ground</p>
+          <div class="countdown justify-content-center mb-4" id="eventCountdown" data-date="2026-03-12T09:00:00">
+            <div class="cd-box"><b id="cdDays">00</b><span>Days</span></div>
+            <div class="cd-box"><b id="cdHours">00</b><span>Hours</span></div>
+            <div class="cd-box"><b id="cdMins">00</b><span>Minutes</span></div>
+            <div class="cd-box"><b id="cdSecs">00</b><span>Seconds</span></div>
+          </div>
+          <a href="#register" class="btn-premium">Register to Participate <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Upcoming -->
+    <section class="section section-alt" id="upcoming">
+      <div class="container">
+        <div class="section-head text-center">
+          <span class="eyebrow justify-content-center">Upcoming Events</span>
+          <h2 class="section-title">Coming Up at <span class="g">Francis's</span></h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4 reveal"><div class="card-premium event-card"><div class="event-date-box"><b>12</b><small>March</small></div><div><span class="notice-tag tag-event">Sports</span><h5 class="mt-2 mb-1">Annual Sports Day</h5><small class="text-muted d-block mb-2">9:00 AM  Main Ground</small><p class="small mb-0">A day of parades, track events and celebration with 3,200 athletes.</p></div></div></div>
+          <div class="col-md-6 col-lg-4 reveal delay-1"><div class="card-premium event-card"><div class="event-date-box"><b>14</b><small>March</small></div><div><span class="notice-tag tag-acad">STEM</span><h5 class="mt-2 mb-1">Science Exhibition</h5><small class="text-muted d-block mb-2">10:00 AM  Innovation Hall</small><p class="small mb-0">120 student projects across physics, chemistry, biology and AI.</p></div></div></div>
+          <div class="col-md-6 col-lg-4 reveal delay-2"><div class="card-premium event-card"><div class="event-date-box"><b>21</b><small>April</small></div><div><span class="notice-tag tag-event">Culture</span><h5 class="mt-2 mb-1">Annual Day &amp; Cultural Fest</h5><small class="text-muted d-block mb-2">5:00 PM - Francis Auditorium</small><p class="small mb-0">Drama, dance and music celebrating the school's 41st year.</p></div></div></div>
+          <div class="col-md-6 col-lg-4 reveal"><div class="card-premium event-card"><div class="event-date-box"><b>28</b><small>April</small></div><div><span class="notice-tag tag-gen">Open House</span><h5 class="mt-2 mb-1">Admission Open House</h5><small class="text-muted d-block mb-2">10:00 AM  Campus</small><p class="small mb-0">Tour the campus, meet teachers and experience Francis's firsthand.</p></div></div></div>
+          <div class="col-md-6 col-lg-4 reveal delay-1"><div class="card-premium event-card"><div class="event-date-box"><b>15</b><small>Aug</small></div><div><span class="notice-tag tag-event">National</span><h5 class="mt-2 mb-1">Independence Day</h5><small class="text-muted d-block mb-2">8:00 AM  Main Ground</small><p class="small mb-0">Flag hoisting, patriotic songs and the march past.</p></div></div></div>
+          <div class="col-md-6 col-lg-4 reveal delay-2"><div class="card-premium event-card"><div class="event-date-box"><b>05</b><small>Sep</small></div><div><span class="notice-tag tag-acad">Teachers</span><h5 class="mt-2 mb-1">Teachers' Day Celebration</h5><small class="text-muted d-block mb-2">10:00 AM  Auditorium</small><p class="small mb-0">Students take over the classrooms — a day of gratitude and fun.</p></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Past events -->
+    <section class="section" id="past">
+      <div class="container">
+        <div class="section-head text-center">
+          <span class="eyebrow justify-content-center">Past Events</span>
+          <h2 class="section-title">Memories We <span class="g">Cherish</span></h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4 reveal"><div class="card-premium p-0 h-100"><div class="img-card" style="height:190px"><img src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=900&auto=format&fit=crop" alt="Science fair"></div><div class="p-4"><h6>Science &amp; Innovation Fair 2025</h6><small class="text-muted">150+ exhibits, 3,000 visitors</small></div></div></div>
+          <div class="col-md-4 reveal delay-1"><div class="card-premium p-0 h-100"><div class="img-card" style="height:190px"><img src="https://images.unsplash.com/photo-1478147427282-58a87a120781?q=80&w=900&auto=format&fit=crop" alt="Cultural fest"></div><div class="p-4"><h6>Annual Cultural Fest 2025</h6><small class="text-muted">An evening of music &amp; dance</small></div></div></div>
+          <div class="col-md-4 reveal delay-2"><div class="card-premium p-0 h-100"><div class="img-card" style="height:190px"><img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&w=900&auto=format&fit=crop" alt="Sports day"></div><div class="p-4"><h6>Annual Sports Day 2025</h6><small class="text-muted">Record-breaking 12 new records</small></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Calendar + gallery -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-5 reveal-left">
+            <span class="eyebrow">Event Calendar</span>
+            <h2 class="section-title mb-4">This Month at a <span class="g">Glance</span></h2>
+            <div class="card-premium p-0" id="eventCalendar"></div>
+            <div class="text-muted small mt-3"><i class="fa-solid fa-circle-info me-1"></i>Highlighted dates show scheduled events.</div>
+          </div>
+          <div class="col-lg-7 reveal-right">
+            <span class="eyebrow">Event Gallery</span>
+            <h2 class="section-title mb-4">Captured <span class="g">Moments</span></h2>
+            <div class="masonry" data-gallery>
+              <div class="masonry-item" data-src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1200&auto=format&fit=crop" data-caption="Science fair"><img src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=600&auto=format&fit=crop" alt="Science fair"></div>
+              <div class="masonry-item" data-src="https://images.unsplash.com/photo-1478147427282-58a87a120781?q=80&w=1200&auto=format&fit=crop" data-caption="Cultural fest stage"><img src="https://images.unsplash.com/photo-1478147427282-58a87a120781?q=80&w=600&auto=format&fit=crop" alt="Cultural stage"></div>
+              <div class="masonry-item" data-src="https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=1200&auto=format&fit=crop" data-caption="Basketball final"><img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=600&auto=format&fit=crop" alt="Basketball game"></div>
+              <div class="masonry-item" data-src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1200&auto=format&fit=crop" data-caption="Diwali celebration"><img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=600&auto=format&fit=crop" alt="Celebration"></div>
+              <div class="masonry-item" data-src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format&fit=crop" data-caption="Workshop"><img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=600&auto=format&fit=crop" alt="Workshop"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Register -->
+    <section class="section" id="register">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-7">
+            <div class="card-premium p-4 p-lg-5 reveal-zoom">
+              <div class="text-center mb-4">
+                <span class="eyebrow justify-content-center">Event Registration</span>
+                <h2 class="section-title mb-0">Register for the Next <span class="g">Event</span></h2>
+              </div>
+              <form class="form-premium" data-handle>
+                <div class="row g-3">
+                  <div class="col-md-6"><label>Student Name *</label><input class="form-control" type="text" required></div>
+                  <div class="col-md-6"><label>Class *</label><input class="form-control" type="text" required placeholder="e.g. Class VII"></div>
+                  <div class="col-md-6"><label>Parent Contact *</label><input class="form-control" type="tel" required></div>
+                  <div class="col-md-6"><label>Event</label><select class="form-select"><option>Annual Sports Day</option><option>Science Exhibition</option><option>Annual Day</option><option>Other</option></select></div>
+                  <div class="col-12 text-center mt-4"><button class="btn-premium" type="submit"><i class="fa-solid fa-calendar-check"></i> Confirm Registration</button></div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer data-component></footer>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+    <span class="lb-close">&times;</span>
+    <span class="lb-nav prev">&#10094;</span>
+    <img src="" alt="Gallery image">
+    <span class="lb-nav next">&#10095;</span>
+    <div class="lb-caption"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

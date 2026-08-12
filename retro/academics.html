@@ -1,0 +1,225 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+(function () {
+  document.addEventListener("click", function (e) {
+    var el = e.target && e.target.closest ? e.target.closest("[data-theme-toggle]") : null;
+    if (!el) return;
+    var next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    var icons = document.querySelectorAll("[data-theme-toggle] i");
+    for (var i = 0; i < icons.length; i++) icons[i].className = next === "dark" ? "fa-solid fa-sun" : "fa-solid fa-moon";
+  });
+})();
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Academics | St. Francis School</title>
+  <meta name="description" content="Explore the CBSE curriculum at St. Francis School ” Nursery, Primary, Middle, Secondary and Senior Secondary wings with modern learning methodology.">
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.16/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/theme-retro.css">
+</head>
+<body>
+
+  <header data-component></header>
+
+  <main>
+    <section class="page-hero">
+      <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2070&auto=format&fit=crop')"></div>
+      <div class="container">
+        <h1 class="reveal">Academics</h1>
+        <div class="crumbs reveal delay-1 mt-4"><a href="index.html">Home</a><span class="sep">/</span><span>Academics</span></div>
+      </div>
+    </section>
+
+    <!-- Curriculum overview -->
+    <section class="section">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 reveal-left">
+            <span class="eyebrow">Curriculum Overview</span>
+            <h2 class="section-title mb-4">A CBSE Curriculum, <span class="g">Reimagined</span></h2>
+            <p class="mb-3">Our curriculum follows the National Education Framework under the CBSE board, enriched with international best practices. From play-based learning in the nursery to career-oriented streams in senior secondary, every stage is thoughtfully designed for the developing mind.</p>
+            <p class="mb-4">Learning is organised around real-world contexts, with formative assessments, project work and experiential activities woven into every term.</p>
+            <div class="row g-3">
+              <div class="col-6"><div class="glass-card text-center"><i class="fa-solid fa-book-open-reader text-primary mb-2"></i><h6 class="mb-1">3 Languages</h6><small class="text-muted">English, Hindi, French</small></div></div>
+              <div class="col-6"><div class="glass-card text-center"><i class="fa-solid fa-magnifying-glass-chart text-primary mb-2"></i><h6 class="mb-1">STEM-Focused</h6><small class="text-muted">Coding from Class III</small></div></div>
+              <div class="col-6"><div class="glass-card text-center"><i class="fa-solid fa-palette text-primary mb-2"></i><h6 class="mb-1">Arts &amp; Sports</h6><small class="text-muted">Integrated daily</small></div></div>
+              <div class="col-6"><div class="glass-card text-center"><i class="fa-solid fa-heart-pulse text-primary mb-2"></i><h6 class="mb-1">Life Skills</h6><small class="text-muted">Weekly sessions</small></div></div>
+            </div>
+          </div>
+          <div class="col-lg-6 reveal-right">
+            <div class="img-frame"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1400&auto=format&fit=crop" alt="Students in a modern classroom" class="img-cover" style="height:440px"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wings tabs -->
+    <section class="section section-alt" id="wings">
+      <div class="container">
+        <div class="section-head text-center">
+          <span class="eyebrow justify-content-center">Academic Wings</span>
+          <h2 class="section-title">Every Stage, <span class="g">Perfectly Crafted</span></h2>
+        </div>
+        <div class="pill-tabs mb-4" id="wingTabs">
+          <button class="pill active" data-wing="nursery">Nursery Wing</button>
+          <button class="pill" data-wing="primary">Primary Wing</button>
+          <button class="pill" data-wing="middle">Middle Wing</button>
+          <button class="pill" data-wing="secondary">Secondary Wing</button>
+          <button class="pill" data-wing="senior">Senior Secondary</button>
+        </div>
+        <div class="card-premium p-4 p-lg-5 reveal" id="wingContent">
+          <div data-wingpanel="nursery">
+            <div class="row align-items-center g-4">
+              <div class="col-lg-4"><img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?q=80&w=800&auto=format&fit=crop" alt="Nursery classroom" class="rounded-20 img-cover" style="height:260px"></div>
+              <div class="col-lg-8">
+                <h4>Play, Discover &amp; Grow <span class="text-warning">(Age 3-5)</span></h4>
+                <p>Our nursery wing is a world of colour and wonder. The play-way method, Montessori activities and sensory learning help little learners explore the world joyfully.</p>
+                <ul class="check-list mb-0"><li>Storytelling, rhymes and phonemic awareness</li><li>Motor-skill development and art exploration</li><li>Music, movement and nature walks</li><li>Safe, carpeted, age-appropriate classrooms</li></ul>
+              </div>
+            </div>
+          </div>
+          <div data-wingpanel="primary" style="display:none">
+            <div class="row align-items-center g-4">
+              <div class="col-lg-4"><img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=800&auto=format&fit=crop" alt="Primary classroom" class="rounded-20 img-cover" style="height:260px"></div>
+              <div class="col-lg-8">
+                <h4>Building Strong Foundations <span class="text-warning">(Classes I-V)</span></h4>
+                <p>Strong literacy and numeracy are built through engaging, activity-based lessons. Concepts come alive with experiments, projects and digital tools.</p>
+                <ul class="check-list mb-0"><li>English, Hindi and Computer Science</li><li>Environmental Science through discovery</li><li>Art, music, dance and physical education</li><li>Value education woven into daily life</li></ul>
+              </div>
+            </div>
+          </div>
+          <div data-wingpanel="middle" style="display:none">
+            <div class="row align-items-center g-4">
+              <div class="col-lg-4"><img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=800&auto=format&fit=crop" alt="Middle school library" class="rounded-20 img-cover" style="height:260px"></div>
+              <div class="col-lg-8">
+                <h4>Curiosity Into Concepts <span class="text-warning">(Classes VI-VIII)</span></h4>
+                <p>Subjects deepen with critical thinking and inquiry. Students gain 1:1 devices, learn coding and robotics, and develop strong study habits.</p>
+                <ul class="check-list mb-0"><li>Science, Maths &amp; Social Science labs</li><li>Third language: French or Hindi</li><li>Robotics, AI &amp; coding curriculum</li><li>Mentor groups for personal growth</li></ul>
+              </div>
+            </div>
+          </div>
+          <div data-wingpanel="secondary" style="display:none">
+            <div class="row align-items-center g-4">
+              <div class="col-lg-4"><img src="https://images.unsplash.com/photo-1588072432836-e10032774350?q=80&w=800&auto=format&fit=crop" alt="Secondary students" class="rounded-20 img-cover" style="height:260px"></div>
+              <div class="col-lg-8">
+                <h4>Board-Level Rigour, Student-First <span class="text-warning">(Classes IX-X)</span></h4>
+                <p>Structured preparation for the CBSE board examinations, with personalised mentoring, mock exams and stress-management support.</p>
+                <ul class="check-list mb-0"><li>Doubt-clearing clinics after school</li><li>Sample-paper and board-exam coaching</li><li>Career guidance &amp; psychometric mapping</li><li>Leadership through student council</li></ul>
+              </div>
+            </div>
+          </div>
+          <div data-wingpanel="senior" style="display:none">
+            <div class="row align-items-center g-4">
+              <div class="col-lg-4"><img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=800&auto=format&fit=crop" alt="Senior secondary students" class="rounded-20 img-cover" style="height:260px"></div>
+              <div class="col-lg-8">
+                <h4>Pathways to the Future <span class="text-warning">(Classes XI-XII)</span></h4>
+                <p>Choice-based subject streams prepare students for competitive examinations and global universities with expert faculty.</p>
+                <ul class="check-list mb-0"><li>Science: PCM / PCB with optional CS &amp; IP</li><li>Commerce: Accounts, Business Studies, Economics</li><li>Humanities: Psychology, Pol. Sci., Sociology</li><li>JEE / NEET / CUET foundation support</li></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Streams -->
+    <section class="section" id="streams">
+      <div class="container">
+        <div class="section-head text-center">
+          <span class="eyebrow justify-content-center">Subject Streams</span>
+          <h2 class="section-title">Choose the Path to Your <span class="g">Dream</span></h2>
+        </div>
+        <div class="row g-4" data-stagger>
+          <div class="col-md-4 reveal"><div class="card-premium feature-card h-100"><div class="card-icon"><i class="fa-solid fa-flask"></i></div><h4>Science</h4><p>Physics, Chemistry, Biology, Mathematics, Computer Science, Informatics Practices with JEE/NEET foundation.</p></div></div>
+          <div class="col-md-4 reveal delay-1"><div class="card-premium feature-card h-100"><div class="card-icon"><i class="fa-solid fa-chart-line"></i></div><h4>Commerce</h4><p>Accountancy, Business Studies, Economics, Mathematics/Applied Maths  with CA &amp; management grooming.</p></div></div>
+          <div class="col-md-4 reveal delay-2"><div class="card-premium feature-card h-100"><div class="card-icon"><i class="fa-solid fa-scale-balanced"></i></div><h4>Humanities</h4><p>History, Political Science, Psychology, Sociology, Economics  with civil-services and media mentorship.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Examination system & methodology -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-6 reveal-left">
+            <div class="card-premium p-4 h-100">
+              <h4 class="mb-3"><i class="fa-solid fa-file-circle-check text-primary me-2"></i>Examination System</h4>
+              <p class="small mb-4">A transparent, continuous assessment framework aligned with CBSE guidelines.</p>
+              <table class="table-premium">
+                <thead><tr><th>Wing</th><th>Assessment Pattern</th></tr></thead>
+                <tbody>
+                  <tr><td>Nursery–II</td><td>Continuous observation &amp; activity-based grading</td></tr>
+                  <tr><td>III-VIII</td><td>Periodic tests + term-end examinations</td></tr>
+                  <tr><td>IX-X</td><td>Internal assessment (20%) + board examinations (80%)</td></tr>
+                  <tr><td>XI-XII</td><td>Internal assessment + CBSE board examinations</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="col-lg-6 reveal-right">
+            <div class="card-premium p-4 h-100">
+              <h4 class="mb-3"><i class="fa-solid fa-chalkboard-user text-primary me-2"></i>Learning Methodology</h4>
+              <p class="small mb-4">Our teachers blend time-tested techniques with modern pedagogy.</p>
+              <div class="d-flex flex-column gap-3">
+                <div class="d-flex gap-3 align-items-start"><span class="badge rounded-pill px-3 py-2" style="background:rgba(37,99,235,.12);color:var(--royal-2)">01</span><div><b class="text-navy d-block">Experiential Learning</b><small class="text-muted">Learn by doing  labs, field trips, projects.</small></div></div>
+                <div class="d-flex gap-3 align-items-start"><span class="badge rounded-pill px-3 py-2" style="background:rgba(251,191,36,.18);color:var(--gold-2)">02</span><div><b class="text-navy d-block">Smart Classrooms</b><small class="text-muted">Interactive panels and gamified quizzes.</small></div></div>
+                <div class="d-flex gap-3 align-items-start"><span class="badge rounded-pill px-3 py-2" style="background:rgba(16,185,129,.12);color:var(--green)">03</span><div><b class="text-navy d-block">Personalised Mentoring</b><small class="text-muted">Small groups, individual attention, 1:18 ratio.</small></div></div>
+                <div class="d-flex gap-3 align-items-start"><span class="badge rounded-pill px-3 py-2" style="background:rgba(239,68,68,.12);color:var(--red)">04</span><div><b class="text-navy d-block">Continuous Feedback</b><small class="text-muted">Digital report cards updated every term.</small></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-band reveal-zoom text-center">
+          <h2 class="display-6 fw-bold mb-3">Ready to Join Our Academic Community?</h2>
+          <p class="mx-auto mb-4" style="max-width:520px">Admissions for 2026–27 are open across all wings. Book a campus visit or apply online.</p>
+          <a href="admissions.html" class="btn-premium">Begin Admission Process <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer data-component></footer>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+    <span class="lb-close">&times;</span>
+    <span class="lb-nav prev">&#10094;</span>
+    <img src="" alt="Gallery image">
+    <span class="lb-nav next">&#10095;</span>
+    <div class="lb-caption"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    (function () {
+      document.querySelectorAll("#wingTabs .pill").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          document.querySelectorAll("#wingTabs .pill").forEach(function (b) { b.classList.remove("active"); });
+          btn.classList.add("active");
+          var w = btn.getAttribute("data-wing");
+          document.querySelectorAll("[data-wingpanel]").forEach(function (p) {
+            p.style.display = p.getAttribute("data-wingpanel") === w ? "" : "none";
+          });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

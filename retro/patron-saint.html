@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+(function () {
+  document.addEventListener("click", function (e) {
+    var el = e.target && e.target.closest ? e.target.closest("[data-theme-toggle]") : null;
+    if (!el) return;
+    var next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    var icons = document.querySelectorAll("[data-theme-toggle] i");
+    for (var i = 0; i < icons.length; i++) icons[i].className = next === "dark" ? "fa-solid fa-sun" : "fa-solid fa-moon";
+  });
+})();
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mission and Vision | St. Francis School</title>
+  <meta name="description" content="Mission and Vision">
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.16/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/theme-retro.css">
+</head>
+<body>
+
+  <header data-component></header>
+
+  <main>
+    <section class="page-hero">
+      <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1504893524553-b855bce32c67?q=80&w=2070&auto=format&fit=crop')"></div>
+      <div class="container">
+        <h1 class="reveal">Mission and Vision</h1>
+        <div class="crumbs reveal delay-1 mt-4"><a href="index.html">Home</a><span class="sep">/</span><span>Mission and Vision</span></div>
+      </div>
+    </section>
+
+    <!-- Biography -->
+    <section class="section">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-5 reveal-left">
+            <div class="position-relative">
+              <div class="img-frame"><img src="assets/img/vission.png" alt="St. Francis patron saint" class="img-cover" style="height:520px"></div>
+              <div class="exp-badge"><b>Mission</b><span> and<br>Vision</span></div>
+            </div>
+          </div>
+          <div class="col-lg-7 reveal-right">
+            <!-- <span class="eyebrow">Biography</span> -->
+            <h2 class="section-title mb-4">Mission<span class="g"> and Vision</span></h2>
+            <p class="mb-3">We consider school as a powerful agent in forming fully alive human beings to bring about a just society. Our school’s aim is to create individuals who are intellectually competent, morally sound, psychologically whole, imbued with the sense of divinity, committed to the cause of justice, love and peace and ever open to further growth.</p>
+            <p class="mb-3">The school aspires towards creating a humane society, free from prejudice, superstitions and discrimination based on sex, religion, caste and economic status, and characterized by respect for the dignity of the human, leading to concern for each other especially the underprivileged.</p>
+            <p class="mb-3">For the attainment of this goal, we expect parent and teacher to share this vision and co-operation in making it a reality.</p>
+            <p class="mb-3"></p>Our vision of education is based on the conviction and has a unique role to play in one’s integral growth as well as in the society’s development and reconstruction.</p>
+            <!-- <div class="d-flex gap-3 flex-wrap">
+              <div class="glass-card text-center"><div class="fs-4 fw-bold text-navy">1506</div><small class="text-muted">Born · Navarre, Spain</small></div>
+              <div class="glass-card text-center"><div class="fs-4 fw-bold text-navy">1542</div><small class="text-muted">Arrived in India</small></div>
+              <div class="glass-card text-center"><div class="fs-4 fw-bold text-navy">1552</div><small class="text-muted">Passed away · Sancian</small></div>
+              <div class="glass-card text-center"><div class="fs-4 fw-bold text-navy">1622</div><small class="text-muted">Canonised Saint</small></div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quotes -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head text-center">
+          <span class="eyebrow justify-content-center">Inspirational Quotes</span>
+          <h2 class="section-title">Words That Inspire Our <span class="g">Students</span></h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4 reveal"><div class="card-premium p-4 h-100"><i class="fa-solid fa-quote-left fs-1 text-warning mb-3"></i><p class="fs-6 fst-italic mb-4">"Give me the children until they are seven, and anyone may have them afterwards."</p><small class="text-muted"> St. Francis School</small></div></div>
+          <div class="col-md-6 col-lg-4 reveal delay-1"><div class="card-premium p-4 h-100"><i class="fa-solid fa-quote-left fs-1 text-warning mb-3"></i><p class="fs-6 fst-italic mb-4">"We must speak to them with the language of the heart, not merely with words."</p><small class="text-muted">St. Francis School</small></div></div>
+          <div class="col-md-6 col-lg-4 reveal delay-2"><div class="card-premium p-4 h-100"><i class="fa-solid fa-quote-left fs-1 text-warning mb-3"></i><p class="fs-6 fst-italic mb-4">"Love and fidelity never disappoint those who place their trust in them."</p><small class="text-muted">St. Francis School</small></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline -->
+    <!-- <section class="section">
+      <div class="container">
+        <div class="section-head text-center">
+          <span class="eyebrow justify-content-center">Life Timeline</span>
+          <h2 class="section-title">The Journey of a <span class="g">Lifelong Learner</span></h2>
+        </div>
+        <div class="timeline">
+          <div class="tl-item reveal-left"><div class="dot"></div><div class="tl-card"><span class="year">1506</span><h5>Birth in Navarre, Spain</h5><p>Born into a noble family in the Francis castle, northern Spain.</p></div></div>
+          <div class="tl-item reveal-right"><div class="dot"></div><div class="tl-card"><span class="year">1525</span><h5>University of Paris</h5><p>Became a brilliant student and met Ignatius of Loyola.</p></div></div>
+          <div class="tl-item reveal-left"><div class="dot"></div><div class="tl-card"><span class="year">1540</span><h5>Co-founds the Jesuits</h5><p>One of the first seven members of the Society of Jesus.</p></div></div>
+          <div class="tl-item reveal-right"><div class="dot"></div><div class="tl-card"><span class="year">1542</span><h5>Mission to the East</h5><p>Arrived in Goa, India, and began teaching and serving the poor.</p></div></div>
+          <div class="tl-item reveal-left"><div class="dot"></div><div class="tl-card"><span class="year">1549</span><h5>Japan &amp; Beyond</h5><p>Carried education and faith to Japan and Southeast Asia.</p></div></div>
+          <div class="tl-item reveal-right"><div class="dot"></div><div class="tl-card"><span class="year">1552</span><h5>Legacy of Service</h5><p>Passed away at Sancian Island; canonised saint in 1622.</p></div></div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Gallery -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head text-center">
+          <span class="eyebrow justify-content-center">Reflections</span>
+          <h2 class="section-title">Patron Saint <span class="g">Gallery</span></h2>
+        </div>
+        <div class="masonry" data-gallery>
+          <div class="masonry-item reveal" data-src="https://images.unsplash.com/photo-1504893524553-b855bce32c67?q=80&w=1200&auto=format&fit=crop" data-caption="A moment of contemplation"><img src="https://images.unsplash.com/photo-1504893524553-b855bce32c67?q=80&w=600&auto=format&fit=crop" alt="Church interior"></div>
+          <div class="masonry-item reveal delay-1" data-src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=1200&auto=format&fit=crop" data-caption="Books and learning"><img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=600&auto=format&fit=crop" alt="Ancient books"></div>
+          <!-- <div class="masonry-item reveal delay-2" data-src="https://images.unsplash.com/photo-1532372320572-cda25653a694?q=80&w=1200&auto=format&fit=crop" data-caption="Statue of the patron saint"><img src="https://images.unsplash.com/photo-1532372320572-cda25653a694?q=80&w=600&auto=format&fit=crop" alt="Statue"></div> -->
+          <div class="masonry-item reveal delay-3" data-src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1200&auto=format&fit=crop" data-caption="Feast day celebration"><img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=600&auto=format&fit=crop" alt="Candles celebration"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer data-component></footer>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+    <span class="lb-close">&times;</span>
+    <span class="lb-nav prev">&#10094;</span>
+    <img src="" alt="Gallery image">
+    <span class="lb-nav next">&#10095;</span>
+    <div class="lb-caption"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

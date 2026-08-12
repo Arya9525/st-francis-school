@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+(function () {
+  document.addEventListener("click", function (e) {
+    var el = e.target && e.target.closest ? e.target.closest("[data-theme-toggle]") : null;
+    if (!el) return;
+    var next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    var icons = document.querySelectorAll("[data-theme-toggle] i");
+    for (var i = 0; i < icons.length; i++) icons[i].className = next === "dark" ? "fa-solid fa-sun" : "fa-solid fa-moon";
+  });
+})();
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Virtual Tour | St. Francis School</title>
+  <meta name="description" content="Take a 360° virtual tour of St. Francis School campus classrooms, labs, library, sports and facilities.">
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.16/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/theme-retro.css">
+</head>
+<body>
+
+  <header data-component></header>
+
+  <main>
+    <section class="page-hero">
+      <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=2070&auto=format&fit=crop')"></div>
+      <div class="container">
+        <h1 class="reveal">Virtual Campus Tour</h1>
+        <div class="crumbs reveal delay-1 mt-4"><a href="index.html">Home</a><span class="sep">/</span><span>Virtual Tour</span></div>
+      </div>
+    </section>
+
+    <!-- Panorama -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head text-center">
+          <span class="eyebrow justify-content-center">360° Experience</span>
+          <h2 class="section-title">Drag to Explore the <span class="g">Campus</span></h2>
+          <p class="section-sub mx-auto">Hold and drag the panoramic view left or right. Click the golden hotspots to discover facilities.</p>
+        </div>
+        <div class="panorama reveal-zoom" id="panorama">
+          <div class="pan-img" style="background-image:url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2400&auto=format&fit=crop')"></div>
+          <div class="pano-hotspot" style="top:38%;left:22%" data-target="smart" title="Smart Classrooms"><i class="fa-solid fa-chalkboard"></i></div>
+          <div class="pano-hotspot" style="top:60%;left:48%" data-target="library" title="Library"><i class="fa-solid fa-book-open"></i></div>
+          <div class="pano-hotspot" style="top:30%;left:74%" data-target="sports" title="Sports Complex"><i class="fa-solid fa-medal"></i></div>
+          <div class="pano-tip position-absolute bottom-0 start-50 translate-middle-x text-white mb-3 px-3 py-2 rounded-pill" style="background:rgba(74,14,30,.7);font-size:13px;backdrop-filter:blur(6px)"><i class="fa-solid fa-hand-pointer me-1"></i>Drag to look around</div>
+        </div>
+
+        <!-- Hotspot detail -->
+        <div class="row g-4 mt-4" id="facilityDetails">
+          <div class="col-lg-4 reveal"><div class="card-premium p-4 h-100 text-center" data-detail="smart"><i class="fa-solid fa-chalkboard fs-1 text-primary mb-3"></i><h5>Smart Classrooms</h5><p class="small mb-0">75-inch interactive panels, AC rooms and collaborative seating for active learning.</p></div></div>
+          <div class="col-lg-4 reveal delay-1"><div class="card-premium p-4 h-100 text-center" data-detail="library"><i class="fa-solid fa-book-open fs-1 text-primary mb-3"></i><h5>Digital Library</h5><p class="small mb-0">25,000+ print books, 60 journals and a full digital library for research and reading.</p></div></div>
+          <div class="col-lg-4 reveal delay-2"><div class="card-premium p-4 h-100 text-center" data-detail="sports"><i class="fa-solid fa-medal fs-1 text-primary mb-3"></i><h5>Sports Complex</h5><p class="small mb-0">Athletics track, football turf, basketball courts and a 20,000 sq. ft. indoor arena.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive map -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head text-center">
+          <span class="eyebrow justify-content-center">Interactive Campus Map</span>
+          <h2 class="section-title">Find Your Way Around <span class="g">Francis's</span></h2>
+        </div>
+        <div class="campus-map reveal-zoom">
+          <svg viewBox="0 0 900 480" style="width:100%;height:auto" role="img" aria-label="Interactive campus map">
+            <rect x="0" y="0" width="900" height="480" fill="#EAF1F8"/>
+            <rect x="40" y="40" width="240" height="150" rx="12" fill="#4A0E1E" opacity=".9"/>
+            <text x="160" y="100" text-anchor="middle" fill="#fff" font-size="16" font-weight="bold">HERITAGE BLOCK</text>
+            <text x="160" y="122" text-anchor="middle" fill="#E9B84C" font-size="11">Admin &amp; Auditorium</text>
+            <g class="map-point" data-loc="heritage">
+              <circle cx="160" cy="145" r="10" fill="#E9B84C"/><text x="160" y="149" text-anchor="middle" fill="#4A0E1E" font-size="12" font-weight="bold">+</text>
+            </g>
+            <rect x="320" y="40" width="240" height="150" rx="12" fill="#8E1F3C" opacity=".9"/>
+            <text x="440" y="100" text-anchor="middle" fill="#fff" font-size="16" font-weight="bold">ACADEMIC WING</text>
+            <text x="440" y="122" text-anchor="middle" fill="#E9B84C" font-size="11">Smart Classrooms · Labs</text>
+            <g class="map-point" data-loc="academic">
+              <circle cx="440" cy="145" r="10" fill="#E9B84C"/><text x="440" y="149" text-anchor="middle" fill="#4A0E1E" font-size="12" font-weight="bold">+</text>
+            </g>
+            <rect x="600" y="40" width="260" height="150" rx="12" fill="#4A0E1E"/>
+            <text x="730" y="100" text-anchor="middle" fill="#fff" font-size="16" font-weight="bold">SPORTS COMPLEX</text>
+            <text x="730" y="122" text-anchor="middle" fill="#E9B84C" font-size="11">Indoor Arena &amp; Courts</text>
+            <g class="map-point" data-loc="sports">
+              <circle cx="730" cy="145" r="10" fill="#E9B84C"/><text x="730" y="149" text-anchor="middle" fill="#4A0E1E" font-size="12" font-weight="bold">+</text>
+            </g>
+            <ellipse cx="450" cy="330" rx="330" ry="110" fill="#A7D9A8"/>
+            <text x="450" y="315" text-anchor="middle" fill="#14532D" font-size="16" font-weight="bold">PLAYGROUND &amp; FOOTBALL TURF</text>
+            <text x="450" y="338" text-anchor="middle" fill="#14532D" font-size="11">400m Track · 2 Basketball Courts</text>
+            <g class="map-point" data-loc="playground">
+              <circle cx="450" cy="360" r="10" fill="#E9B84C"/><text x="450" y="364" text-anchor="middle" fill="#4A0E1E" font-size="12" font-weight="bold">+</text>
+            </g>
+            <rect x="60" y="330" width="180" height="110" rx="12" fill="#E9B84C" opacity=".95"/>
+            <text x="150" y="375" text-anchor="middle" fill="#4A0E1E" font-size="15" font-weight="bold">LIBRARY</text>
+            <text x="150" y="395" text-anchor="middle" fill="#4A0E1E" font-size="11">Reading Hall · Digital</text>
+            <g class="map-point" data-loc="library">
+              <circle cx="150" cy="415" r="10" fill="#4A0E1E"/><text x="150" y="419" text-anchor="middle" fill="#E9B84C" font-size="12" font-weight="bold">+</text>
+            </g>
+            <rect x="660" y="330" width="180" height="110" rx="12" fill="#10B981" opacity=".9"/>
+            <text x="750" y="375" text-anchor="middle" fill="#fff" font-size="15" font-weight="bold">CAFETERIA</text>
+            <text x="750" y="395" text-anchor="middle" fill="#fff" font-size="11">Hygienic Dining</text>
+            <g class="map-point" data-loc="cafeteria">
+              <circle cx="750" cy="415" r="10" fill="#E9B84C"/><text x="750" y="419" text-anchor="middle" fill="#4A0E1E" font-size="12" font-weight="bold">+</text>
+            </g>
+            <rect x="20" y="230" width="18" height="220" fill="#94A3B8"/><text x="52" y="240" fill="#64748B" font-size="11">Gate 1</text>
+          </svg>
+        </div>
+        <p class="text-center text-muted mt-3 small"><i class="fa-solid fa-hand-pointer me-1"></i>Click a building to view details</p>
+      </div>
+    </section>
+
+    <!-- Highlights -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head text-center">
+          <span class="eyebrow justify-content-center">Facility Highlights</span>
+          <h2 class="section-title">Quick Facts About Our <span class="g">Campus</span></h2>
+        </div>
+        <div class="row g-4 text-center">
+          <div class="col-6 col-md-3 reveal"><div class="card-premium feature-card"><div class="fs-2 fw-bold text-navy">15<span class="text-warning">acres</span></div><small class="text-muted">Green Campus</small></div></div>
+          <div class="col-6 col-md-3 reveal delay-1"><div class="card-premium feature-card"><div class="fs-2 fw-bold text-navy">60<span class="text-warning">+</span></div><small class="text-muted">Smart Classrooms</small></div></div>
+          <div class="col-6 col-md-3 reveal delay-2"><div class="card-premium feature-card"><div class="fs-2 fw-bold text-navy">900<span class="text-warning">-seat</span></div><small class="text-muted">Auditorium</small></div></div>
+          <div class="col-6 col-md-3 reveal delay-3"><div class="card-premium feature-card"><div class="fs-2 fw-bold text-navy">24<span class="text-warning">/7</span></div><small class="text-muted">Security &amp; CCTV</small></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer data-component></footer>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+    <span class="lb-close">&times;</span>
+    <span class="lb-nav prev">&#10094;</span>
+    <img src="" alt="Gallery image">
+    <span class="lb-nav next">&#10095;</span>
+    <div class="lb-caption"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    (function () {
+      var cards = document.querySelectorAll("[data-detail]");
+      document.querySelectorAll(".pano-hotspot").forEach(function (hs) {
+        hs.addEventListener("click", function () {
+          var t = hs.getAttribute("data-target");
+          cards.forEach(function (c) {
+            var active = c.getAttribute("data-detail") === t;
+            c.style.boxShadow = active ? "0 0 0 3px #E9B84C, 0 12px 34px rgba(74,14,30,.16)" : "";
+            c.style.transform = active ? "translateY(-6px)" : "";
+          });
+          var target = document.querySelector('[data-detail="' + t + '"]');
+          if (target) target.scrollIntoView({ behavior: "smooth", block: "center" });
+        });
+      });
+      document.querySelectorAll(".map-point").forEach(function (pt) {
+        pt.addEventListener("click", function () {
+          var loc = pt.getAttribute("data-loc");
+          var map = {
+            heritage: "Heritage Block — administration, reception and the 900-seat Francis Auditorium.",
+            academic: "Academic Wing — 60 smart classrooms, science, computer and maths labs.",
+            sports: "Sports Complex — indoor arena, basketball courts, gym and trophy room.",
+            playground: "Playground — football turf, 400m track and athletics facilities.",
+            library: "Library — 25,000+ books, journals and a fully digital reading room.",
+            cafeteria: "Cafeteria — hygienic, dietitian-planned vegetarian meals."
+          };
+          alert(map[loc] || "Explore our facilities!");
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

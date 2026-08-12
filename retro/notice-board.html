@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+(function () {
+  document.addEventListener("click", function (e) {
+    var el = e.target && e.target.closest ? e.target.closest("[data-theme-toggle]") : null;
+    if (!el) return;
+    var next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    var icons = document.querySelectorAll("[data-theme-toggle] i");
+    for (var i = 0; i < icons.length; i++) icons[i].className = next === "dark" ? "fa-solid fa-sun" : "fa-solid fa-moon";
+  });
+})();
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Notice Board | St. Francis School</title>
+  <meta name="description" content="Official notices, circulars and announcements from St. Francis School. Search and download notices as PDF.">
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.16/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/theme-retro.css">
+</head>
+<body>
+
+  <header data-component></header>
+
+  <main>
+    <section class="page-hero">
+      <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=2070&auto=format&fit=crop')"></div>
+      <div class="container">
+        <h1 class="reveal">Notice Board</h1>
+        <div class="crumbs reveal delay-1 mt-4"><a href="index.html">Home</a><span class="sep">/</span><span>Notice Board</span></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-8">
+            <!-- Controls -->
+            <div class="d-flex flex-wrap gap-3 mb-4">
+              <div class="flex-grow-1" style="min-width:220px">
+                <div class="input-group">
+                  <span class="input-group-text bg-white border-end-0"><i class="fa-solid fa-magnifying-glass text-muted"></i></span>
+                  <input class="form-control border-start-0" id="noticeSearch" type="search" placeholder="Search notices" style="border-radius:0 12px 12px 0">
+                </div>
+              </div>
+              <div class="pill-tabs justify-content-start" data-scope="notice" style="flex-wrap:nowrap;overflow-x:auto">
+                <button class="pill active" data-filter="all" data-scope="notice">All</button>
+                <button class="pill" data-filter="important" data-scope="notice">Important</button>
+                <button class="pill" data-filter="academic" data-scope="notice">Academic</button>
+                <button class="pill" data-filter="event" data-scope="notice">Events</button>
+                <button class="pill" data-filter="general" data-scope="notice">General</button>
+              </div>
+            </div>
+
+            <div data-filter-grid="notice" class="d-flex flex-column gap-3">
+              <div class="notice-item reveal" data-notice-item data-cat="important">
+                <div class="notice-date"><b>20</b><small>Jan</small></div>
+                <div class="flex-grow-1">
+                  <span class="notice-tag tag-imp">Important</span>
+                  <h6 class="mt-2 mb-1">Admissions Open Session 2026–27</h6>
+                  <small class="text-muted">Online registrations open for Nursery to Class IX. Seats limited, apply before 31 March 2026.</small>
+                </div>
+                <a href="#" class="btn-ghost btn-sm flex-shrink-0"><i class="fa-solid fa-file-pdf"></i> PDF</a>
+              </div>
+              <div class="notice-item reveal" data-notice-item data-cat="event">
+                <div class="notice-date"><b>12</b><small>Mar</small></div>
+                <div class="flex-grow-1">
+                  <span class="notice-tag tag-event">Event</span>
+                  <h6 class="mt-2 mb-1">Annual Sports Day 2026</h6>
+                  <small class="text-muted">Marching parade, track events and prize distribution from 9:00 AM at the main ground.</small>
+                </div>
+                <a href="#" class="btn-ghost btn-sm flex-shrink-0"><i class="fa-solid fa-file-pdf"></i> PDF</a>
+              </div>
+              <div class="notice-item reveal" data-notice-item data-cat="academic">
+                <div class="notice-date"><b>18</b><small>Mar</small></div>
+                <div class="flex-grow-1">
+                  <span class="notice-tag tag-acad">Academic</span>
+                  <h6 class="mt-2 mb-1">Parent-Teacher Meet · Classes IX-XII</h6>
+                  <small class="text-muted">Progress discussions from 9:00 AM to 1:00 PM. Attendance is mandatory.</small>
+                </div>
+                <a href="#" class="btn-ghost btn-sm flex-shrink-0"><i class="fa-solid fa-file-pdf"></i> PDF</a>
+              </div>
+              <div class="notice-item reveal" data-notice-item data-cat="general">
+                <div class="notice-date"><b>05</b><small>Feb</small></div>
+                <div class="flex-grow-1">
+                  <span class="notice-tag tag-gen">General</span>
+                  <h6 class="mt-2 mb-1">Winter Uniform Update</h6>
+                  <small class="text-muted">Winter uniform mandatory until 28 February. New winter sweaters available at the school store.</small>
+                </div>
+                <a href="#" class="btn-ghost btn-sm flex-shrink-0"><i class="fa-solid fa-file-pdf"></i> PDF</a>
+              </div>
+              <div class="notice-item reveal" data-notice-item data-cat="academic">
+                <div class="notice-date"><b>26</b><small>Jan</small></div>
+                <div class="flex-grow-1">
+                  <span class="notice-tag tag-acad">Academic</span>
+                  <h6 class="mt-2 mb-1">Class X &amp; XII Pre-Board Results</h6>
+                  <small class="text-muted">Pre-board results published on the parent portal. Review with your ward and plan revisions.</small>
+                </div>
+                <a href="#" class="btn-ghost btn-sm flex-shrink-0"><i class="fa-solid fa-file-pdf"></i> PDF</a>
+              </div>
+              <div class="notice-item reveal" data-notice-item data-cat="important">
+                <div class="notice-date"><b>14</b><small>Mar</small></div>
+                <div class="flex-grow-1">
+                  <span class="notice-tag tag-imp">Important</span>
+                  <h6 class="mt-2 mb-1">Science Exhibition  Winners Announced</h6>
+                  <small class="text-muted">Congratulations to all participants. Winners receive certificates at the assembly.</small>
+                </div>
+                <a href="#" class="btn-ghost btn-sm flex-shrink-0"><i class="fa-solid fa-file-pdf"></i> PDF</a>
+              </div>
+              <div class="notice-item reveal" data-notice-item data-cat="event">
+                <div class="notice-date"><b>21</b><small>Apr</small></div>
+                <div class="flex-grow-1">
+                  <span class="notice-tag tag-event">Event</span>
+                  <h6 class="mt-2 mb-1">Annual Day &amp; Cultural Fest</h6>
+                  <small class="text-muted">An evening of drama, dance and music at the Francis Auditorium. Parents warmly invited.</small>
+                </div>
+                <a href="#" class="btn-ghost btn-sm flex-shrink-0"><i class="fa-solid fa-file-pdf"></i> PDF</a>
+              </div>
+              <div class="notice-item reveal" data-notice-item data-cat="general">
+                <div class="notice-date"><b>01</b><small>Mar</small></div>
+                <div class="flex-grow-1">
+                  <span class="notice-tag tag-gen">General</span>
+                  <h6 class="mt-2 mb-1">Summer Timings Begin 1 April</h6>
+                  <small class="text-muted">School timings change to 7:30 AM - 1:30 PM from 1 April. Transport schedule updated.</small>
+                </div>
+                <a href="#" class="btn-ghost btn-sm flex-shrink-0"><i class="fa-solid fa-file-pdf"></i> PDF</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <div class="col-lg-4">
+            <div class="card-premium p-4 mb-4 reveal">
+              <h5 class="mb-3"><i class="fa-solid fa-bullhorn text-warning me-2"></i>Featured Announcement</h5>
+              <div class="img-card mb-3" style="height:150px"><img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=800&auto=format&fit=crop" alt="Admissions banner"></div>
+              <span class="notice-tag tag-imp mb-2 d-inline-block">Important</span>
+              <h6>Admissions Open for 2026–27</h6>
+              <p class="small mb-3">Limited seats across all classes. Apply online before 31 March 2026.</p>
+              <a href="admissions.html" class="btn-navy btn-sm w-100">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="card-premium p-4 mb-4 reveal">
+              <h5 class="mb-3"><i class="fa-solid fa-calendar-days text-primary me-2"></i>Upcoming Deadlines</h5>
+              <div class="d-flex justify-content-between align-items-center py-2 border-bottom"><small class="text-muted">Sports Day registration</small><b class="text-navy small">28 Feb</b></div>
+              <div class="d-flex justify-content-between align-items-center py-2 border-bottom"><small class="text-muted">Fee payment (term 2)</small><b class="text-navy small">10 Mar</b></div>
+              <div class="d-flex justify-content-between align-items-center py-2 border-bottom"><small class="text-muted">Admission deadline</small><b class="text-navy small">31 Mar</b></div>
+              <div class="d-flex justify-content-between align-items-center py-2"><small class="text-muted">Annual Day tickets</small><b class="text-navy small">10 Apr</b></div>
+            </div>
+            <div class="cta-band reveal p-4 text-center" style="padding:34px 24px !important">
+              <h5 class="text-white">Never miss a notice!</h5>
+              <p class="small mb-3 text-white-50">Get instant push notifications through the St. Francis School app.</p>
+              <a href="#" class="btn-premium btn-sm w-100 justify-content-center"><i class="fa-brands fa-google-play"></i> Download App</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer data-component></footer>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+    <span class="lb-close">&times;</span>
+    <span class="lb-nav prev">&#10094;</span>
+    <img src="" alt="Gallery image">
+    <span class="lb-nav next">&#10095;</span>
+    <div class="lb-caption"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

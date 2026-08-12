@@ -1,0 +1,573 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+(function () {
+  document.addEventListener("click", function (e) {
+    var el = e.target && e.target.closest ? e.target.closest("[data-theme-toggle]") : null;
+    if (!el) return;
+    var next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    var icons = document.querySelectorAll("[data-theme-toggle] i");
+    for (var i = 0; i < icons.length; i++) icons[i].className = next === "dark" ? "fa-solid fa-sun" : "fa-solid fa-moon";
+  });
+})();
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>St Francis School | CBSE Affiliated Premium School in  Sadabad, UP</title>
+  <meta name="description" content="St Francis School is a premium CBSE-affiliated school in Sadabad, UP offering world-class education, smart classrooms, sports and holistic development. Admissions open for 2026-27.">
+  <meta name="keywords" content="CBSE school Sadabad, UP, best school, international school, admissions open, St Francis">
+  <meta property="og:title" content="St Francis School">
+  <meta property="og:description" content="Nurturing Minds, Shaping Futures Admissions Open 2026-27">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.16/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/theme-retro.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"School","name":"St Francis School","address":{"@type":"PostalAddress","addressLocality":"Sadabad","addressRegion":"UP","postalCode":"211301","addressCountry":"IN"},"telephone":"+91-9119772205","email":"sfssadabad@gmail.com","url":"https://www.stfrancisschool.edu.in"}
+  </script>
+</head>
+<body>
+  <header data-component></header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop')"></div>
+      <div class="hero-blob b1"></div>
+      <div class="hero-blob b2"></div>
+      <div class="hero-blob b3"></div>
+      <i class="fa-solid fa-graduation-cap hero-float-ic fi1" aria-hidden="true"></i>
+      <i class="fa-solid fa-book-open hero-float-ic fi2" aria-hidden="true"></i>
+      <i class="fa-solid fa-star hero-float-ic fi3" aria-hidden="true"></i>
+      <div class="container hero-content">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-8">
+            <div class="hero-badge mb-4 reveal"><span class="dot"></span> Admissions Open · Session 2026–27</div>
+            <h1 class="reveal delay-1 mb-3">Nurturing Minds,<br><span class="gold">Shaping Futures</span></h1>
+            <div class="hero-divider reveal delay-2"><i class="fa-solid fa-landmark-flag"></i></div>
+            <p class="lead mb-4 reveal delay-2">
+              A premier CBSE-affiliated institution building <b class="rotator" data-words="academic excellence|strength of character|global citizenship|joyful curiosity">academic excellence</b> for every child.
+            </p>
+            <div class="btn-row reveal delay-3">
+              <a href="admissions.html" class="btn-premium"><i class="fa-solid fa-pen-to-square"></i> Apply for Admission</a>
+              <a href="virtual-tour.html" class="btn-outline-premium"><i class="fa-solid fa-360-degrees"></i> Virtual Campus Tour</a>
+            </div>
+            <div class="hero-trust reveal delay-4">
+              <div><b>2018</b><span>Established</span></div>
+              <i class="sep"></i>
+              <div><b>785+</b><span>Students</span></div>
+              <i class="sep"></i>
+              <div><b>33+</b><span>Educators</span></div>
+            </div>
+          </div>
+          <div class="col-lg-4 d-none d-lg-flex justify-content-end">
+            <div class="crest-card reveal-zoom">
+              <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+              <div class="crest-emblems">
+    <img src="assets/img/logo.png"
+         alt="St. Francis School Logo"
+         class="crest-logo">
+</div>
+              <h3 class="crest-title">St. Francis</h3>
+              <p class="crest-sub">School</p>
+              <div class="crest-rule"></div>
+              <p class="crest-motto">Truth · Service · Excellence</p>
+              <div class="crest-stats">
+                <div class="float-chip"><i class="fa-solid fa-award"></i><span class="num">100%</span> Board Results</div>
+                <div class="float-chip"><i class="fa-solid fa-book-open"></i><span class="num">25k+</span> Books &amp; Journals</div>
+                <div class="float-chip"><i class="fa-solid fa-medal"></i><span class="num">12+</span> Sports &amp; Clubs</div>
+                <div class="float-chip"><i class="fa-solid fa-shield-halved"></i><span class="num">24×7</span> Safe Campus</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll d-none d-md-flex"><div class="mouse"></div>Scroll to explore</div>
+    </section>
+
+    <!-- ============ HERO STATS OVERLAY ============ -->
+    <section class="container mt-n6 mb-5 position-relative" style="z-index:4">
+      <div class="row g-4">
+        <div class="col-6 col-lg-3 reveal delay-1">
+          <div class="stat-card">
+            <div class="stat-icon mb-2"><i class="fa-solid fa-calendar-check"></i></div>
+            <div class="stat-num"><span data-count="2018">0</span></div>
+            <div class="stat-label">Established Year</div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3 reveal delay-2">
+          <div class="stat-card">
+            <div class="stat-icon mb-2"><i class="fa-solid fa-users"></i></div>
+            <div class="stat-num"><span data-count="785" data-suffix="+">0</span></div>
+            <div class="stat-label">Students Enrolled</div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3 reveal delay-3">
+          <div class="stat-card">
+            <div class="stat-icon mb-2"><i class="fa-solid fa-chalkboard-user"></i></div>
+            <div class="stat-num"><span data-count="33" data-suffix="+">0</span></div>
+            <div class="stat-label">Expert Faculty</div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3 reveal delay-4">
+          <div class="stat-card">
+            <div class="stat-icon mb-2"><i class="fa-solid fa-trophy"></i></div>
+            <div class="stat-num"><span data-count="100" data-suffix="%">0</span></div>
+            <div class="stat-label">Board Results</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE STRIP ============ -->
+    <section class="marquee-strip" aria-label="Accreditations and highlights">
+      <div class="marquee-track">
+        <span><i class="fa-solid fa-award"></i> CBSE Affiliated No. 830567</span>
+        <span><i class="fa-solid fa-trophy"></i> Top 50 School in India 2025</span>
+        <span><i class="fa-solid fa-certificate"></i> ISO 9001 : 2015 Certified</span>
+        <span><i class="fa-solid fa-earth-asia"></i> Education World Ranked</span>
+        <span><i class="fa-solid fa-star"></i> Green Campus Certified</span>
+        <span><i class="fa-solid fa-flask"></i> 128 Olympiad Medals</span>
+        <span><i class="fa-solid fa-award"></i> CBSE Affiliated No. 830567</span>
+        <span><i class="fa-solid fa-trophy"></i> Top 50 School in India 2025</span>
+        <span><i class="fa-solid fa-certificate"></i> ISO 9001 : 2015 Certified</span>
+        <span><i class="fa-solid fa-earth-asia"></i> Education World Ranked</span>
+        <span><i class="fa-solid fa-star"></i> Green Campus Certified</span>
+        <span><i class="fa-solid fa-flask"></i> 128 Olympiad Medals</span>
+      </div>
+    </section>
+
+    <!-- ============ NOTICE TICKER ============ -->
+    <section class="ticker mt-4" aria-label="Latest notices">
+      <div class="container d-flex align-items-center gap-3 overflow-hidden">
+        <span class="label"><i class="fa-solid fa-bullhorn"></i> Notice</span>
+        <div class="ticker-track">
+          <a href="notice-board.html">Admissions open for Session 2026-27  Last date 31 March</a>
+          <a href="notice-board.html">Annual Sports Day on 12 March  registrations open</a>
+          <a href="notice-board.html">Parent Teacher Meet for Classes IX-XII on 18 March</a>
+          <a href="notice-board.html">Science Exhibition results announced  view winners</a>
+          <a href="notice-board.html">Winter uniform update from 1 March</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ QUICK HIGHLIGHTS ============ -->
+    <section class="section" id="highlights">
+      <div class="container">
+        <div class="section-head text-center">
+          <span class="eyebrow justify-content-center">Quick Highlights</span>
+          <h2 class="section-title">The School at a Glance</h2>
+        </div>
+        <div class="row g-4" data-stagger>
+          <div class="col-6 col-md-4 col-lg reveal"><div class="card-premium feature-card text-center"><div class="card-icon mx-auto"><i class="fa-solid fa-flag"></i></div><h4>Established</h4><p>2018</p></div></div>
+          <div class="col-6 col-md-4 col-lg reveal delay-1"><div class="card-premium feature-card text-center"><div class="card-icon mx-auto"><i class="fa-solid fa-building-columns"></i></div><h4>CBSE Affiliation</h4><p>No. 830567</p></div></div>
+          <div class="col-6 col-md-4 col-lg reveal delay-2"><div class="card-premium feature-card text-center"><div class="card-icon mx-auto"><i class="fa-solid fa-barcode"></i></div><h4>School Code</h4><p>SFSSBD</p></div></div>
+          <div class="col-6 col-md-4 col-lg reveal delay-3"><div class="card-premium feature-card text-center"><div class="card-icon mx-auto"><i class="fa-solid fa-user-graduate"></i></div><h4>Student Strength</h4><p>785+</p></div></div>
+          <div class="col-6 col-md-4 col-lg reveal delay-4"><div class="card-premium feature-card text-center"><div class="card-icon mx-auto"><i class="fa-solid fa-chalkboard-user"></i></div><h4>Faculty Count</h4><p>33+</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRINCIPAL MESSAGE ============ -->
+    <section class="section section-alt" id="message">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-5 reveal-left">
+            <div class="position-relative">
+              <div class="img-frame">
+                <img src="assets/img/Principal.jpg" alt="Principal of St. Francis School" class="img-cover" style="height:480px;object-position:top">
+              </div>
+              <div class="exp-badge"><b>8+</b><span>Years of<br>Excellence</span></div>
+            </div>
+          </div>
+          <div class="col-lg-7 reveal-right">
+            <span class="eyebrow">From the Principal's Desk</span>
+            <h2 class="section-title mb-4">Message from the <span class="g">Principal</span></h2>
+            <div class="fs-6 text-muted" style="line-height:1.9">
+              <p>Dear Students, Parents and Well-wishers,</p>
+              <p>It is with great pride that I welcome you to St. Francis School. For nearly four decades, our institution has stood as a beacon of academic excellence, rooted in values that build character and confidence.</p>
+              <div class="collapse" id="principalFull" style="transition:max-height .5s ease;max-height:0;overflow:hidden">
+                <p>Our philosophy is simple yet profound  every child is unique, and education must celebrate that uniqueness. We blend a rigorous CBSE curriculum with experiential learning, technology and the arts, so that our students don't just pass examinations — they discover their passions and purpose.</p>
+                <p>As we step into 2026, I invite you to be part of a community where teachers mentor, parents partner and students thrive. Together, we will nurture minds that think critically, hearts that care deeply, and leaders who serve selflessly.</p>
+                <p>Warm regards,<br><span class="signature">Rev. Fr. Suresh D'Souza</span><br><small class="text-muted">Principal, St. Francis School</small></p>
+              </div>
+            </div>
+            <button class="btn-ghost mt-3" data-readmore="#principalFull">Read More <i class="fa-solid fa-chevron-down"></i></button>
+            <div class="d-flex gap-3 mt-4">
+              <a href="principal-message.html" class="btn-navy">Full Message <i class="fa-solid fa-arrow-right"></i></a>
+              <a href="headmistress-message.html" class="btn-ghost">Manager Message</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT PREVIEW ============ -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 reveal-left">
+            <span class="eyebrow">About Our School</span>
+            <h2 class="section-title mb-4">Where Excellence Meets <span class="g">Compassion</span></h2>
+            <p class="mb-4">Established in 2018, St. Francis School has grown into one of Sadabad's most respected educational institutions. With a sprawling 15-acre campus, state-of-the-art facilities and a dedicated faculty, we provide an education that is both world-class and deeply humane.</p>
+            <div class="d-flex gap-3 mb-4">
+              <div class="glass-card text-center" style="flex:1"><i class="fa-solid fa-bullseye text-primary mb-2" style="font-size:1.6rem"></i><h6 class="mb-1">Our Vision</h6><p class="mb-0 small">To empower every learner to excel intellectually, lead ethically and serve society with compassion.</p></div>
+              <div class="glass-card text-center" style="flex:1"><i class="fa-solid fa-heart text-danger mb-2" style="font-size:1.6rem"></i><h6 class="mb-1">Our Mission</h6><p class="mb-0 small">Deliver holistic, future-ready education through innovation, values and a safe nurturing environment.</p></div>
+            </div>
+            <ul class="check-list mb-4">
+              <li>Experiential, activity-driven curriculum for all ages</li>
+              <li>Dedicated 1:1 mentoring and career counselling</li>
+              <li>Global partnerships and international exchange programs</li>
+              <li>Safe, inclusive and technology-enabled campus</li>
+            </ul>
+            <a href="about.html" class="btn-navy">Learn More About Us <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="col-lg-6 reveal-right">
+            <div class="row g-3">
+              <div class="col-7"><div class="img-card" style="height:340px"><img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=1200&auto=format&fit=crop" alt="School building"><div class="overlay"><div><h5>15-Acre Campus</h5><p>Green, modern &amp; secure</p></div></div></div></div>
+              <div class="col-5"><div class="img-card" style="height:160px"><img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?q=80&w=800&auto=format&fit=crop" alt="Classroom"><div class="overlay"><div><h5>Smart Classes</h5></div></div></div></div>
+              <div class="col-5"><div class="img-card" style="height:160px"><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop" alt="Students learning"><div class="overlay"><div><h5>Learning</h5></div></div></div></div>
+              <div class="col-7"><div class="img-card" style="height:340px"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop" alt="Students collaborating"><div class="overlay"><div><h5>Collaborative Learning</h5><p>Teamwork &amp; creativity</p></div></div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHY CHOOSE US ============ -->
+    <section class="section section-alt" id="why-us">
+      <div class="container">
+        <div class="section-head text-center">
+          <span class="eyebrow justify-content-center">Why Choose Us</span>
+          <h2 class="section-title">An Education Beyond <span class="g">Textbooks</span></h2>
+          <p class="section-sub mx-auto">Six pillars that make St. Francis a school where children love to learn.</p>
+        </div>
+        <div class="row g-4" data-stagger>
+          <div class="col-md-6 col-lg-4 reveal"><div class="card-premium feature-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><h4>Academic Excellence</h4><p>Consistent 100% board results with 45+ students scoring above 95% in the last examination.</p></div></div>
+          <div class="col-md-6 col-lg-4 reveal delay-1"><div class="card-premium feature-card"><div class="card-icon"><i class="fa-solid fa-hand-holding-heart"></i></div><h4>Character Building</h4><p>Value-based education rooted in faith, integrity and service through daily life skills programs.</p></div></div>
+          <div class="col-md-6 col-lg-4 reveal delay-2"><div class="card-premium feature-card"><div class="card-icon"><i class="fa-solid fa-medal"></i></div><h4>Sports Excellence</h4><p>Professional coaching in 12+ sports with a 20,000 sq. ft. indoor arena and state-level champions.</p></div></div>
+          <div class="col-md-6 col-lg-4 reveal"><div class="card-premium feature-card"><div class="card-icon"><i class="fa-solid fa-lightbulb"></i></div><h4>Innovation &amp; STEM</h4><p>Dedicated innovation lab, robotics club and STEM curriculum encouraging curiosity and creation.</p></div></div>
+          <div class="col-md-6 col-lg-4 reveal delay-1"><div class="card-premium feature-card"><div class="card-icon"><i class="fa-solid fa-microchip"></i></div><h4>Technology</h4><p>Smart classrooms, 1:1 devices from Class VI, AI-assisted learning and digital report cards.</p></div></div>
+          <div class="col-md-6 col-lg-4 reveal delay-2"><div class="card-premium feature-card"><div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div><h4>Safety &amp; Security</h4><p>GPS buses, CCTV campus, biometric entry and trained counsellors for complete child safety.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INFRASTRUCTURE SHOWCASE ============ -->
+    <section class="section" id="infrastructure">
+      <div class="container">
+        <div class="section-head text-center">
+          <span class="eyebrow justify-content-center">Infrastructure</span>
+          <h2 class="section-title">A Campus Built for <span class="g">Inspiring Minds</span></h2>
+        </div>
+        <div class="row g-3" data-stagger>
+          <div class="col-6 col-lg-3 reveal"><div class="img-card" style="height:260px"><img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1000&auto=format&fit=crop" alt="Main building"><div class="overlay"><div><h5>Heritage Block</h5><p>Administration &amp; auditorium</p></div></div></div></div>
+          <div class="col-6 col-lg-3 reveal delay-1"><div class="img-card" style="height:260px"><img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1000&auto=format&fit=crop" alt="Library"><div class="overlay"><div><h5>Digital Library</h5><p>25,000+ books &amp; e-resources</p></div></div></div></div>
+          <div class="col-6 col-lg-3 reveal delay-2"><div class="img-card" style="height:260px"><img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=1000&auto=format&fit=crop" alt="Classroom"><div class="overlay"><div><h5>Smart Classrooms</h5><p>Interactive panels in every room</p></div></div></div></div>
+          <div class="col-6 col-lg-3 reveal delay-3"><div class="img-card" style="height:260px"><img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&w=1000&auto=format&fit=crop" alt="Sports track"><div class="overlay"><div><h5>Sports Complex</h5><p>Track, turf &amp; courts</p></div></div></div></div>
+          <div class="col-6 col-lg-3 reveal"><div class="img-card" style="height:260px"><img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=1000&auto=format&fit=crop" alt="Science lab"><div class="overlay"><div><h5>Science Labs</h5><p>Physics · Chemistry · Biology</p></div></div></div></div>
+          <div class="col-6 col-lg-3 reveal delay-1"><div class="img-card" style="height:260px"><img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=1000&auto=format&fit=crop" alt="Basketball court"><div class="overlay"><div><h5>Basketball Court</h5><p>International standard</p></div></div></div></div>
+          <div class="col-6 col-lg-3 reveal delay-2"><div class="img-card" style="height:260px"><img src="https://images.unsplash.com/photo-1478147427282-58a87a120781?q=80&w=1000&auto=format&fit=crop" alt="Music room"><div class="overlay"><div><h5>Music &amp; Arts</h5><p>Sound-proof studios</p></div></div></div></div>
+          <div class="col-6 col-lg-3 reveal delay-3"><div class="img-card" style="height:260px"><img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1000&auto=format&fit=crop" alt="Students in classroom"><div class="overlay"><div><h5>Joyful Learning</h5><p>Child-centric pedagogy</p></div></div></div></div>
+        </div>
+        <div class="text-center mt-5"><a href="facilities.html" class="btn-navy">Explore All Facilities <i class="fa-solid fa-arrow-right"></i></a></div>
+      </div>
+    </section>
+
+    <!-- ============ ACADEMIC EXCELLENCE ============ -->
+    <section class="section bg-navy text-white position-relative overflow-hidden" id="results" style="background:linear-gradient(135deg,#4A0E1E,#8E1F3C)">
+      <div class="container position-relative">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 reveal-left">
+            <span class="eyebrow justify-content-start" style="color:#E9B84C">Academic Excellence</span>
+            <h2 class="section-title text-white mb-4">Results That Speak <span class="gradient-text">Loudly</span></h2>
+            <p class="text-white-50 mb-4">For 8 consecutive years, our students have delivered outstanding board results. But excellence at St. Francis School is about more than scores — it's about curiosity, confidence and character.</p>
+            <div class="row g-4 text-center">
+              <div class="col-6"><div class="glass-card"><div class="fs-1 fw-bold text-white"><span data-count="100" data-suffix="%">0</span></div><small class="text-white-50">Board Pass Rate</small></div></div>
+              <div class="col-6"><div class="glass-card"><div class="fs-1 fw-bold text-white"><span data-count="45" data-suffix="+">0</span></div><small class="text-white-50">Scored 95%+</small></div></div>
+              <div class="col-6"><div class="glass-card"><div class="fs-1 fw-bold text-white"><span data-count="28">0</span></div><small class="text-white-50">National Olympiad Medals</small></div></div>
+              <div class="col-6"><div class="glass-card"><div class="fs-1 fw-bold text-white"><span data-count="120" data-suffix="+">0</span></div><small class="text-white-50">Top University Offers</small></div></div>
+            </div>
+          </div>
+          <div class="col-lg-6 reveal-right">
+            <div class="card-premium p-0" style="background:#fff">
+              <div class="p-4" style="border-bottom:1px solid var(--border)"><h4 class="mb-0"><i class="fa-solid fa-user-graduate text-primary me-2"></i>Our Toppers - 2025</h4></div>
+              <div class="p-3">
+                <div class="d-flex align-items-center gap-3 p-3 rounded-3 mb-2" style="background:#FBF6EE">
+                  <div class="flex-shrink-0 fs-3 text-warning"></div>
+                  <div class="flex-grow-1"><b class="text-navy">Ananya Sharma</b><br><small class="text-muted">Class XII · 99.4% · IIT Bombay</small></div>
+                  <span class="badge" style="background:var(--grad-gold);color:var(--navy)">State Rank 2</span>
+                </div>
+                <div class="d-flex align-items-center gap-3 p-3 rounded-3 mb-2" style="background:#FBF6EE">
+                  <div class="flex-shrink-0 fs-3 text-muted"></div>
+                  <div class="flex-grow-1"><b class="text-navy">Rohan Khanna</b><br><small class="text-muted">Class XII · 98.7% · AIIMS Delhi</small></div>
+                  <span class="badge" style="background:var(--grad-navy);color:#fff">City Rank 3</span>
+                </div>
+                <div class="d-flex align-items-center gap-3 p-3 rounded-3" style="background:#FBF6EE">
+                  <div class="flex-shrink-0 fs-3 text-muted"></div>
+                  <div class="flex-grow-1"><b class="text-navy">Sara Fernandes</b><br><small class="text-muted">Class X · 99.1% · National Topper</small></div>
+                  <span class="badge" style="background:var(--grad-gold);color:var(--navy)">99.1%</span>
+                </div>
+              </div>
+              <div class="p-4 pt-0"><a href="achievements.html" class="btn-ghost">View All Achievements <i class="fa-solid fa-arrow-right"></i></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SCHOOL FACILITIES ============ -->
+    <section class="section" id="facilities">
+      <div class="container">
+        <div class="section-head text-center">
+          <span class="eyebrow justify-content-center">World-Class Facilities</span>
+          <h2 class="section-title">Everything Your Child Needs to <span class="g">Thrive</span></h2>
+        </div>
+        <div class="row g-4" data-stagger>
+          <div class="col-6 col-md-4 col-lg-3 reveal"><div class="card-premium feature-card text-center"><div class="card-icon mx-auto"><i class="fa-solid fa-chalkboard"></i></div><h4>Smart Classrooms</h4><p>Interactive digital panels</p></div></div>
+          <div class="col-6 col-md-4 col-lg-3 reveal delay-1"><div class="card-premium feature-card text-center"><div class="card-icon mx-auto"><i class="fa-solid fa-computer"></i></div><h4>Computer Lab</h4><p>100+ modern systems</p></div></div>
+          <div class="col-6 col-md-4 col-lg-3 reveal delay-2"><div class="card-premium feature-card text-center"><div class="card-icon mx-auto"><i class="fa-solid fa-flask"></i></div><h4>Science Lab</h4><p>Physics, Chem, Biology</p></div></div>
+          <div class="col-6 col-md-4 col-lg-3 reveal delay-3"><div class="card-premium feature-card text-center"><div class="card-icon mx-auto"><i class="fa-solid fa-calculator"></i></div><h4>Mathematics Lab</h4><p>Hands-on learning</p></div></div>
+          <div class="col-6 col-md-4 col-lg-3 reveal"><div class="card-premium feature-card text-center"><div class="card-icon mx-auto"><i class="fa-solid fa-book"></i></div><h4>Library</h4><p>25,000+ books &amp; journals</p></div></div>
+          <div class="col-6 col-md-4 col-lg-3 reveal delay-1"><div class="card-premium feature-card text-center"><div class="card-icon mx-auto"><i class="fa-solid fa-staff-snake"></i></div><h4>Medical Room</h4><p>Full-time nurse &amp; doctor</p></div></div>
+          <div class="col-6 col-md-4 col-lg-3 reveal delay-2"><div class="card-premium feature-card text-center"><div class="card-icon mx-auto"><i class="fa-solid fa-basketball"></i></div><h4>Basketball Court</h4><p>International standard</p></div></div>
+          <div class="col-6 col-md-4 col-lg-3 reveal delay-3"><div class="card-premium feature-card text-center"><div class="card-icon mx-auto"><i class="fa-solid fa-futbol"></i></div><h4>Playground</h4><p>Football &amp; athletics</p></div></div>
+          <div class="col-6 col-md-4 col-lg-3 reveal"><div class="card-premium feature-card text-center"><div class="card-icon mx-auto"><i class="fa-solid fa-music"></i></div><h4>Music Room</h4><p>Acoustic studio</p></div></div>
+          <div class="col-6 col-md-4 col-lg-3 reveal delay-1"><div class="card-premium feature-card text-center"><div class="card-icon mx-auto"><i class="fa-solid fa-person-running"></i></div><h4>Dance Room</h4><p>Mirrored practice hall</p></div></div>
+          <div class="col-6 col-md-4 col-lg-3 reveal delay-2"><div class="card-premium feature-card text-center"><div class="card-icon mx-auto"><i class="fa-solid fa-chess"></i></div><h4>Indoor Games</h4><p>Chess, table tennis &amp; more</p></div></div>
+          <div class="col-6 col-md-4 col-lg-3 reveal delay-3"><div class="card-premium feature-card text-center"><div class="card-icon mx-auto"><i class="fa-solid fa-shield-halved"></i></div><h4>Safety &amp; Security</h4><p>24—7 CCTV &amp; biometric</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ACHIEVEMENTS TIMELINE ============ -->
+    <section class="section section-alt" id="achievements">
+      <div class="container">
+        <div class="section-head text-center">
+          <span class="eyebrow justify-content-center">Proud Moments</span>
+          <h2 class="section-title">Our Journey of <span class="g">Recognition</span></h2>
+        </div>
+        <div class="timeline">
+          <div class="tl-item reveal-left"><div class="dot"></div><div class="tl-card"><span class="year">2025</span><h5>National Best School Award</h5><p>Ranked among India's top 50 CBSE schools by Education World.</p></div></div>
+          <div class="tl-item reveal-right"><div class="dot"></div><div class="tl-card"><span class="year">2024</span><h5>100% Board Results · 5th Year Running</h5><p>45+ students scored above 95%; 28 national olympiad medals.</p></div></div>
+          <div class="tl-item reveal-left"><div class="dot"></div><div class="tl-card"><span class="year">2023</span><h5>State Football Champions</h5><p>U-17 football team won the Karnataka State Championship.</p></div></div>
+          <div class="tl-item reveal-right"><div class="dot"></div><div class="tl-card"><span class="year">2022</span><h5>Green Campus Certification</h5><p>Awarded by CII for sustainable, eco-friendly infrastructure.</p></div></div>
+          <div class="tl-item reveal-left"><div class="dot"></div><div class="tl-card"><span class="year">2020</span><h5>Innovation in Education Award</h5><p>Recognized for pioneering smart-classroom &amp; STEM pedagogy.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NEWS & NOTICES ============ -->
+    <section class="section" id="news">
+      <div class="container">
+        <div class="section-head d-flex flex-wrap justify-content-between align-items-end gap-3">
+          <div><span class="eyebrow">Latest News &amp; Notices</span><h2 class="section-title mb-0">Stay <span class="g">Informed</span></h2></div>
+          <a href="notice-board.html" class="btn-ghost">View Notice Board <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="row g-4" data-stagger>
+          <div class="col-lg-6 reveal">
+            <div class="card-premium p-4">
+              <span class="notice-tag tag-imp mb-3">Important</span>
+              <h4 class="mb-2">Admissions Open for Session 2026-27</h4>
+              <small class="text-muted d-block mb-2"><i class="fa-solid fa-clock me-1"></i>Posted 20 January, 2026</small>
+              <p>Online registrations for Nursery to Class IX are now open. Limited seats available in each class — apply before 31 March 2026.</p>
+              <a href="admissions.html" class="btn-ghost mt-2">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-6 reveal delay-1">
+            <div class="d-flex flex-column gap-3">
+              <div class="notice-item">
+                <div class="notice-date"><b>12</b><small>Mar</small></div>
+                <div><span class="notice-tag tag-event">Event</span><h6 class="mt-1 mb-1">Annual Sports Day 2026</h6><small class="text-muted">Track &amp; field, parade, prizes</small></div>
+              </div>
+              <div class="notice-item">
+                <div class="notice-date"><b>18</b><small>Mar</small></div>
+                <div><span class="notice-tag tag-acad">Academics</span><h6 class="mt-1 mb-1">Parent Teacher Meet · IX–XII</h6><small class="text-muted">Progress discussions from 9:00 AM</small></div>
+              </div>
+              <div class="notice-item">
+                <div class="notice-date"><b>26</b><small>Jan</small></div>
+                <div><span class="notice-tag tag-gen">General</span><h6 class="mt-1 mb-1">Republic Day Celebration</h6><small class="text-muted">Flag hoisting &amp; cultural program</small></div>
+              </div>
+              <div class="notice-item">
+                <div class="notice-date"><b>05</b><small>Feb</small></div>
+                <div><span class="notice-tag tag-acad">Results</span><h6 class="mt-1 mb-1">Science Exhibition Results</h6><small class="text-muted">Winners announced — congratulations!</small></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ UPCOMING EVENTS ============ -->
+    <section class="section section-alt" id="events">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-5 reveal-left">
+            <span class="eyebrow">Upcoming Events</span>
+            <h2 class="section-title mb-4">Mark Your <span class="g">Calendar</span></h2>
+            <div class="countdown mb-4" id="eventCountdown" data-date="2026-03-12T09:00:00">
+              <div class="cd-box"><b id="cdDays">00</b><span>Days</span></div>
+              <div class="cd-box"><b id="cdHours">00</b><span>Hours</span></div>
+              <div class="cd-box"><b id="cdMins">00</b><span>Minutes</span></div>
+              <div class="cd-box"><b id="cdSecs">00</b><span>Seconds</span></div>
+            </div>
+            <p class="mb-4">The countdown is live for our <b class="text-navy">Annual Sports Day 2026</b> — an unforgettable day of spirit, sport and celebration.</p>
+            <a href="events.html" class="btn-navy">View All Events <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="col-lg-7 reveal-right">
+            <div class="row g-4">
+              <div class="col-md-6"><div class="card-premium event-card"><div class="event-date-box"><b>12</b><small>March</small></div><div><span class="notice-tag tag-event">Sports</span><h5 class="mt-2 mb-1">Annual Sports Day</h5><small class="text-muted">9:00 AM · Main Ground</small></div></div></div>
+              <div class="col-md-6"><div class="card-premium event-card"><div class="event-date-box"><b>14</b><small>March</small></div><div><span class="notice-tag tag-acad">STEM</span><h5 class="mt-2 mb-1">Science Exhibition</h5><small class="text-muted">10:00 AM · Innovation Hall</small></div></div></div>
+              <div class="col-md-6"><div class="card-premium event-card"><div class="event-date-box"><b>21</b><small>April</small></div><div><span class="notice-tag tag-event">Culture</span><h5 class="mt-2 mb-1">Annual Day &amp; Cultural Fest</h5><small class="text-muted">5:00 PM · Francis Auditorium</small></div></div></div>
+              <div class="col-md-6"><div class="card-premium event-card"><div class="event-date-box"><b>28</b><small>April</small></div><div><span class="notice-tag tag-gen">Admissions</span><h5 class="mt-2 mb-1">Open House for Parents</h5><small class="text-muted">10:00 AM · Campus Tour</small></div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALLERY PREVIEW ============ -->
+    <section class="section" id="gallery">
+      <div class="container">
+        <div class="section-head d-flex flex-wrap justify-content-between align-items-end gap-3">
+          <div><span class="eyebrow">Life at St. Francis School</span><h2 class="section-title mb-0">Gallery <span class="g">Preview</span></h2></div>
+          <a href="gallery.html" class="btn-ghost">Full Gallery <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="masonry" data-gallery>
+          <div class="masonry-item reveal" data-src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format&fit=crop" data-caption="Engaged classrooms"><img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=600&auto=format&fit=crop" alt="Classroom activity"></div>
+          <div class="masonry-item reveal delay-1" data-src="https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=1200&auto=format&fit=crop" data-caption="Basketball practice"><img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=600&auto=format&fit=crop" alt="Basketball court"></div>
+          <div class="masonry-item reveal delay-2" data-src="https://images.unsplash.com/photo-1478147427282-58a87a120781?q=80&w=1200&auto=format&fit=crop" data-caption="Annual cultural fest"><img src="https://images.unsplash.com/photo-1478147427282-58a87a120781?q=80&w=600&auto=format&fit=crop" alt="Cultural fest stage"></div>
+          <div class="masonry-item reveal delay-3" data-src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=1200&auto=format&fit=crop" data-caption="Our library"><img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=600&auto=format&fit=crop" alt="Library shelves"></div>
+          <div class="masonry-item reveal" data-src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1200&auto=format&fit=crop" data-caption="Sports training"><img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=600&auto=format&fit=crop" alt="Students exercising"></div>
+          <div class="masonry-item reveal delay-1" data-src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop" data-caption="Group projects"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=600&auto=format&fit=crop" alt="Students working together"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="section section-alt" id="testimonials">
+      <div class="container">
+        <div class="section-head text-center">
+          <span class="eyebrow justify-content-center">Parent Testimonials</span>
+          <h2 class="section-title">What Parents <span class="g">Say About Us</span></h2>
+        </div>
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row justify-content-center g-4">
+                <div class="col-md-6"><div class="testimonial-card"><span class="quote-mark">"</span><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p class="mb-4">The teachers at St. Francis School genuinely care about every child. My daughter has transformed from a shy learner into a confident public speaker.</p><div class="d-flex align-items-center gap-3"><img class="avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=300&auto=format&fit=crop" alt="Parent testimonial"><div><b class="text-navy d-block">Mrs. Kavitha Rao</b><small class="text-muted">Parent of Class VII student</small></div></div></div></div>
+                <div class="col-md-6"><div class="testimonial-card"><span class="quote-mark">"</span><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p class="mb-4">World-class facilities and a wonderful balance of academics and sports. My son trains at the basketball court and tops his class!</p><div class="d-flex align-items-center gap-3"><img class="avatar" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=300&auto=format&fit=crop" alt="Parent testimonial"><div><b class="text-navy d-block">Mr. Arjun Mehta</b><small class="text-muted">Parent of Class IX student</small></div></div></div></div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row justify-content-center g-4">
+                <div class="col-md-6"><div class="testimonial-card"><span class="quote-mark">"</span><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p class="mb-4">The value-based education here is unmatched. My children have grown into compassionate, disciplined young individuals.</p><div class="d-flex align-items-center gap-3"><img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=300&auto=format&fit=crop" alt="Parent testimonial"><div><b class="text-navy d-block">Dr. Nisha Kapoor</b><small class="text-muted">Parent of Class III &amp; VI</small></div></div></div></div>
+                <div class="col-md-6">
+                  <div class="testimonial-card">
+                    <span class="quote-mark">"</span>
+                    <div class="stars mb-3"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <button class="btn-premium" data-bs-toggle="modal" data-bs-target="#videoModal"><i class="fa-solid fa-circle-play"></i> Watch Video Testimonial</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center gap-3 mt-4">
+            <button class="carousel-control-custom" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="carousel-control-custom" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next"><i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ADMISSION CTA ============ -->
+    <section class="section" id="admission-cta">
+      <div class="container">
+        <div class="cta-band reveal-zoom text-center">
+          <span class="eyebrow justify-content-center" style="color:#E9B84C">Limited Seats Available</span>
+          <h2 class="display-6 fw-bold mb-3">Admissions Open for 2026–27</h2>
+          <p class="mx-auto mb-4" style="max-width:560px">Begin your child's journey at St. Francis School. Fill the online application today and take the first step towards a brighter future.</p>
+          <div class="d-flex justify-content-center gap-3 flex-wrap">
+            <a href="admissions.html" class="btn-premium"><i class="fa-solid fa-pen-to-square"></i> Apply Online Now</a>
+            <a href="admissions.html" class="btn-outline-premium"><i class="fa-solid fa-download"></i> Download Prospectus</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ APP DOWNLOAD ============ -->
+    <section class="section section-alt" id="app">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 reveal-left">
+            <span class="eyebrow">School App</span>
+            <h2 class="section-title mb-4">Stay Connected With Our <span class="g">Mobile App</span></h2>
+            <p class="mb-4">Fees, attendance, homework, results and school notifications — all in one place. Download the St. Francis School app and never miss an update.</p>
+            <div class="d-flex gap-3 flex-wrap mb-4">
+              <a href="#" class="d-inline-flex align-items-center gap-3" style="background:var(--navy);color:#fff;padding:12px 22px;border-radius:14px">
+                <i class="fa-brands fa-apple" style="font-size:1.9rem"></i>
+                <span><small class="d-block" style="font-size:11px;color:rgba(255,255,255,.7)">Download on the</small><b class="fs-6">App Store</b></span>
+              </a>
+              <a href="#" class="d-inline-flex align-items-center gap-3" style="background:var(--navy);color:#fff;padding:12px 22px;border-radius:14px">
+                <i class="fa-brands fa-google-play" style="font-size:1.6rem"></i>
+                <span><small class="d-block" style="font-size:11px;color:rgba(255,255,255,.7)">Get it on</small><b class="fs-6">Google Play</b></span>
+              </a>
+            </div>
+            <ul class="check-list mb-0">
+              <li>Instant fee payment &amp; receipts</li>
+              <li>Homework, results &amp; attendance alerts</li>
+              <li>Live bus tracking &amp; event reminders</li>
+            </ul>
+          </div>
+          <div class="col-lg-6 text-center reveal-right">
+            <div class="glass-card d-inline-block" style="padding:30px">
+              <i class="fa-solid fa-qrcode mb-3" style="font-size:7rem;color:var(--navy)"></i>
+              <h5 class="text-navy">Scan to Download</h5>
+              <small class="text-muted">Point your camera at the QR code</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer data-component></footer>
+
+  <!-- Video testimonial modal -->
+  <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content" style="background:#4A0E1E;border-radius:20px;border:none">
+        <div class="modal-header border-0">
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-3 pb-4">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/scZ3VdCQq6Y" title="School video tour" allowfullscreen loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+    <span class="lb-close">&times;</span>
+    <span class="lb-nav prev">&#10094;</span>
+    <img src="" alt="Gallery image">
+    <span class="lb-nav next">&#10095;</span>
+    <div class="lb-caption"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

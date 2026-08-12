@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+(function () {
+  document.addEventListener("click", function (e) {
+    var el = e.target && e.target.closest ? e.target.closest("[data-theme-toggle]") : null;
+    if (!el) return;
+    var next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    var icons = document.querySelectorAll("[data-theme-toggle] i");
+    for (var i = 0; i < icons.length; i++) icons[i].className = next === "dark" ? "fa-solid fa-sun" : "fa-solid fa-moon";
+  });
+})();
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manager Message | St. Francis School</title>
+  <meta name="description" content="A welcome message from the Manager of St. Francis School on student development and leadership.">
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.16/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/theme-retro.css">
+</head>
+<body>
+
+  <header data-component></header>
+
+  <main>
+    <section class="page-hero">
+      <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2070&auto=format&fit=crop')"></div>
+      <div class="container">
+        <h1 class="reveal">Manager Message</h1>
+        <div class="crumbs reveal delay-1 mt-4"><a href="index.html">Home</a><span class="sep">/</span><span>Manager Message</span></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-8 order-lg-2">
+            <div class="message-card reveal-right">
+              <div class="msg-body">
+                <span class="eyebrow">From the Manager</span>
+                <h2 class="section-title mb-4">“An investment in knowledge pays the best interest.” <span class="g">- Benjamin Franklin</span></h2>
+                <p>My heart fills with immense pleasure as I perceive the progress being made by the St.Francis school, Sadabad.</p>
+                <p>Education and literacy are the two fac es of a coin. We have to be more educated along with being literate. A literate person needs to be educated and an educated person needs to be literate. As human beings, we are people of hope, faith and conviction. We are of a strong opinion that everything is going to be alright one day and as with every problem and tribulation this too shall pass.The cooperation and association of parents, as well as all the stakeholders towards this institution, are commendable. </p>
+                <p>Your involv ement enhances the functioning of the school intact and consistent. We are created in the image and likeness of God, which demands mutual respect, love and understanding of every human being.</p>
+                <p>We need to shun the walls of hateful and divisive ways. Moreover, we need to garner respect, love and brotherhood in our pursuit of life.</p>
+                <p> In this temple of learning we stress on inculcating values and virtues to make our children competent, confident and ready to face the world with courage.</p>
+                <p>Let us love one another and win the hearts of all!</p>
+                <p>With warm regards,<br><span class="signature">REV.FR.STANY RODRIGUES</span><br><small class="text-muted">Manager, St. Francis School</small></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 order-lg-1">
+            <div class="card-premium profile-card reveal-left mb-4">
+              <img class="profile-avatar" src="assets/img/manager.jpg" alt="Manager Rev. Fr. STANY RODRIGUES">
+              <h5>REV.FR.STANY RODRIGUES</h5>
+              <div class="role">M.A., B.Ed. · Early Childhood Expert</div>
+              <p class="bio">Manager since 2018 · 25 years dedicated to child development and positive schooling.</p>
+            </div>
+            <!-- <div class="card-premium p-4 reveal-left delay-1 mb-4">
+              <h5 class="mb-3"><i class="fa-solid fa-heart text-danger me-2"></i>Student Development Goals</h5>
+              <ul class="check-list mb-0">
+                <li>Confidence in self-expression</li>
+                <li>Curiosity &amp; love for learning</li>
+                <li>Empathy &amp; emotional resilience</li>
+                <li>Healthy habits &amp; discipline</li>
+              </ul>
+            </div> -->
+            <!-- <div class="card-premium p-4 reveal-left delay-2">
+              <h5 class="mb-3"><i class="fa-solid fa-users text-primary me-2"></i>Leadership Focus</h5>
+              <p class="small mb-2">Creating joyful, child-first classrooms where every teacher is a nurturer and every child is seen.</p>
+              <div class="progress mb-2" style="height:8px;border-radius:8px;background:var(--bg-soft)">
+                <div class="progress-bar" style="width:95%;border-radius:8px;background:var(--grad-gold)" role="progressbar"></div>
+              </div><small class="text-muted">Teacher-parent communication satisfaction 95%</small>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer data-component></footer>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+    <span class="lb-close">&times;</span>
+    <span class="lb-nav prev">&#10094;</span>
+    <img src="" alt="Gallery image">
+    <span class="lb-nav next">&#10095;</span>
+    <div class="lb-caption"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
