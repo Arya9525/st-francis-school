@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+(function () {
+  document.addEventListener("click", function (e) {
+    var el = e.target && e.target.closest ? e.target.closest("[data-theme-toggle]") : null;
+    if (!el) return;
+    var next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    var icons = document.querySelectorAll("[data-theme-toggle] i");
+    for (var i = 0; i < icons.length; i++) icons[i].className = next === "dark" ? "fa-solid fa-sun" : "fa-solid fa-moon";
+  });
+})();
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>School Timings | St. Francis School</title>
+  <meta name="description" content="Arrival and departure timings for Summer and Winter sessions at St. Francis School, Sadabad, across Pre-Primary and Classes I-VIII.">
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.16/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/theme-retro.css">
+</head>
+<body>
+
+  <header data-component></header>
+
+  <main>
+    <section class="page-hero">
+      <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2070&auto=format&fit=crop')"></div>
+      <div class="container">
+        <h1 class="reveal">School Timings</h1>
+        <div class="crumbs reveal delay-1 mt-4"><a href="index.html">Home</a><span class="sep">/</span><span>School Timings</span></div>
+      </div>
+    </section>
+
+    <!-- Overview strip -->
+    <section class="section" id="overview">
+      <div class="container">
+        <div class="section-head text-center">
+          <span class="eyebrow justify-content-center">Daily Schedule</span>
+          <h2 class="section-title">Arrival &amp; Departure <span class="g">Timings</span></h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3 reveal"><div class="card-premium feature-card h-100 text-center"><div class="card-icon mx-auto"><i class="fa-solid fa-sun"></i></div><h5>Summer Session</h5><p class="small mb-0">Applicable from April to September.</p></div></div>
+          <div class="col-md-6 col-lg-3 reveal delay-1"><div class="card-premium feature-card h-100 text-center"><div class="card-icon mx-auto"><i class="fa-solid fa-snowflake"></i></div><h5>Winter Session</h5><p class="small mb-0">Applicable from October to March.</p></div></div>
+          <div class="col-md-6 col-lg-3 reveal delay-2"><div class="card-premium feature-card h-100 text-center"><div class="card-icon mx-auto"><i class="fa-solid fa-bus"></i></div><h5>Transport Arrival</h5><p class="small mb-0">Buses reach 15 minutes before school time.</p></div></div>
+          <div class="col-md-6 col-lg-3 reveal delay-3"><div class="card-premium feature-card h-100 text-center"><div class="card-icon mx-auto"><i class="fa-solid fa-calendar-week"></i></div><h5>Saturday Schedule</h5><p class="small mb-0">Shorter hours every Saturday.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timing tables -->
+    <section class="section section-alt" id="timings">
+      <div class="container">
+        <div class="row g-4" data-stagger>
+          <div class="col-lg-6 reveal-left">
+            <div class="card-premium p-4 h-100">
+              <h4 class="mb-3"><i class="fa-solid fa-sun text-primary me-2"></i>Summer Timings</h4>
+              <div class="table-responsive">
+                <table class="table-premium">
+                  <thead><tr><th>Class</th><th>Arrival Time</th><th>Departure Time</th></tr></thead>
+                  <tbody>
+                    <tr><td>Pre-Primary</td><td>07:30 AM</td><td>12:30 PM</td></tr>
+                    <tr><td>Pre-Primary (Sat)</td><td>07:30 AM</td><td>10:30 AM</td></tr>
+                    <tr><td>Class I – VIII</td><td>07:30 AM</td><td>01:30 PM</td></tr>
+                    <tr><td>Class I – VIII (Sat)</td><td>07:30 AM</td><td>11:30 AM</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="small text-muted mt-3 mb-0">Applicable from April through September.</p>
+            </div>
+          </div>
+          <div class="col-lg-6 reveal-right">
+            <div class="card-premium p-4 h-100">
+              <h4 class="mb-3"><i class="fa-solid fa-snowflake text-primary me-2"></i>Winter Timings</h4>
+              <div class="table-responsive">
+                <table class="table-premium">
+                  <thead><tr><th>Class</th><th>Arrival Time</th><th>Departure Time</th></tr></thead>
+                  <tbody>
+                    <tr><td>Pre-Primary</td><td>08:30 AM</td><td>01:30 PM</td></tr>
+                    <tr><td>Pre-Primary (Sat)</td><td>08:30 AM</td><td>11:30 AM</td></tr>
+                    <tr><td>Class I – VIII</td><td>08:30 AM</td><td>02:30 PM</td></tr>
+                    <tr><td>Class I – VIII (Sat)</td><td>08:30 AM</td><td>12:30 PM</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="small text-muted mt-3 mb-0">Applicable from October through March.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Note -->
+    <section class="section" id="note">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="glass-card text-center reveal-zoom">
+              <p class="mb-0"><i class="fa-solid fa-circle-info text-primary me-2"></i>Timings are subject to change based on the school calendar and government notices. Parents are advised to check the Notice Board regularly for updates.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer data-component></footer>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+    <span class="lb-close">&times;</span>
+    <span class="lb-nav prev">&#10094;</span>
+    <img src="" alt="Gallery image">
+    <span class="lb-nav next">&#10095;</span>
+    <div class="lb-caption"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

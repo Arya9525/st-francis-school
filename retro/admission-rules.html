@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+(function () {
+  document.addEventListener("click", function (e) {
+    var el = e.target && e.target.closest ? e.target.closest("[data-theme-toggle]") : null;
+    if (!el) return;
+    var next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    var icons = document.querySelectorAll("[data-theme-toggle] i");
+    for (var i = 0; i < icons.length; i++) icons[i].className = next === "dark" ? "fa-solid fa-sun" : "fa-solid fa-moon";
+  });
+})();
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admissions &amp; Withdrawals | St. Francis School</title>
+  <meta name="description" content="Rules and guidelines governing admissions and withdrawals at St. Francis School, Sadabad.">
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.16/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/theme-retro.css">
+</head>
+<body>
+
+  <header data-component></header>
+
+  <main>
+    <section class="page-hero">
+      <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop')"></div>
+      <div class="container">
+        <h1 class="reveal">Admissions &amp; Withdrawals</h1>
+        <div class="crumbs reveal delay-1 mt-4"><a href="index.html">Home</a><span class="sep">/</span><span>Admissions &amp; Withdrawals</span></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head text-center">
+          <span class="eyebrow justify-content-center">Rules &amp; Guidelines</span>
+          <h2 class="section-title">Admission &amp; Withdrawal <span class="g">Policy</span></h2>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="card-premium p-4 p-lg-5 reveal">
+              <ul class="check-list mb-0" style="gap:0">
+                <li>Although Catholic minority schools are primarily meant for Catholics, they may also admit other children irrespective of their caste and creed.</li>
+                <li>No child of less than 3 years 6 months and more than 4 years 6 months will be admitted to LKG. For higher classes, add one year for each class.</li>
+                <li>No pupil will be admitted without a transfer certificate from the last school attended, and in no case shall a student be permitted to attend a class pending formal admission.</li>
+                <li>If a pupil comes from an unrecognised school, his admission can be had only after his transfer certificate is counter-signed by the Inspector of Schools.</li>
+                <li>The Transfer Certificate (TC) of a pupil coming from a school outside Uttar Pradesh State must be counter-signed by the educational authorities of the district in which the school is situated. Please send the transfer certificate in good time to the Principal of the former school for his counter signature; this is required to finalize admission.</li>
+                <li>A pupil joining school for the first time must produce satisfactory evidence of his date of birth, such as an extract from the municipal or village records or a baptismal certificate.</li>
+                <li>Pupil applying for admission is as a rule subjected to an entrance test. In the case of late admission of a pupil, the fee from the beginning of the first term shall be charged, unless otherwise permitted by the Principal.</li>
+                <li>Every application for a T.C. shall be made in writing by the parent or guardian.</li>
+                <li>T.C. will not be issued until all the dues are cleared.</li>
+                <li>A fee of only Rs. 50/- will be charged for a T.C., which will be issued only 3 days after receipt of an application.</li>
+                <li>A month's notice in writing is required before a pupil can be withdrawn. In lieu of such notice, a full additional month's fee will be charged. No notice is accepted during the school vacation, and in case of a withdrawal at this time, the fee must be paid up to the end of the term.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer data-component></footer>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+    <span class="lb-close">&times;</span>
+    <span class="lb-nav prev">&#10094;</span>
+    <img src="" alt="Gallery image">
+    <span class="lb-nav next">&#10095;</span>
+    <div class="lb-caption"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
