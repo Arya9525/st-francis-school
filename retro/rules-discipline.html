@@ -26,6 +26,20 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/theme-retro.css">
+  <style>
+    /* Sections ke beech divider */
+    .curriculum-section {
+      margin-bottom: 36px;
+    }
+    .curriculum-section:last-child {
+      margin-bottom: 0;
+    }
+    .curriculum-divider {
+      border: none;
+      border-top: 1px dashed var(--border);
+      margin: 0 0 36px;
+    }
+  </style>
 </head>
 <body>
 
@@ -33,7 +47,7 @@
 
   <main>
     <section class="page-hero">
-      <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop')"></div>
+      <div class="bg" style="background-image:url('assets/img/banner-image.jpeg')"></div>
       <div class="container">
         <h1 class="reveal">Rules &amp; Discipline</h1>
         <div class="crumbs reveal delay-1 mt-4"><a href="index.html">Home</a><span class="sep">/</span><span>Rules &amp; Discipline</span></div>
@@ -45,47 +59,53 @@
         <div class="row justify-content-center">
           <div class="col-lg-10">
 
-            <!-- Rules and Discipline -->
-            <div class="card-premium p-4 p-lg-5 reveal mb-4">
-              <h4 class="mb-4"><i class="fa-solid fa-diamond text-danger me-2" style="font-size:12px"></i>Rules and Discipline</h4>
-              <ul class="check-list mb-0" style="gap:0">
-                <li>It is the duty of all students to keep their classrooms and other places around the school clean and orderly. They should cultivate a habit of using the dustbin.</li>
-                <li>No student is allowed to play with chalk or write on the black board unless asked to do so by the teacher.</li>
-                <li>Students are not allowed to enter classrooms other than their own.</li>
-                <li>Students are to maintain silence in the school campus, especially in the classrooms, library, labs and verandas. They should not run about when they go in or come out of class to assembly, labs, ground etc. Running and shouting inside the school building is forbidden and unbecoming.</li>
-                <li>When they go for the assembly, they should go silently, in line, one after the other.</li>
-                <li>During the recess, pupils are expected to leave the classrooms and go to the playground.</li>
-                <li>No student will leave his or her class in between the teaching periods.</li>
-                <li>Students are not allowed to bring mobile phones, pen drives, Walkman, tapes, CD etc. to school. These will automatically be confiscated and will not be returned.</li>
-                <li>Students will be sent back home in the absence of a written explanation from their parents for being late and without proper uniform. The school accepts no responsibility if a child is asked to return home during school hours for being late or for non-compliance of any of the rules contained in the school diary.</li>
-              </ul>
-            </div>
-
-            <!-- Recommendation to Parents -->
-            <div class="card-premium p-4 p-lg-5 reveal mb-4">
-              <h4 class="mb-4"><i class="fa-solid fa-diamond text-danger me-2" style="font-size:12px"></i>Recommendation to Parents</h4>
-              <ul class="check-list mb-0" style="gap:0">
-                <li>Parents are expected to cooperate in the efforts of the school regarding regularity, punctuality and discipline.</li>
-                <li>Parents are particularly expected to sign the terminal reports or any other similar documents when required.</li>
-                <li>Parents and guardians are recommended to call at the Principal's office at least once in each term, so as to ascertain from the school authorities what has been the conduct and progress of their ward.</li>
-                <li>Tuitions are playing havoc with the lives of children. They have no time to do any self study; instead they waste away their precious time. The growing-up mind is being polluted in different ways. Hence encourage children to form the habit of self study and to clarify their doubts from their own subject teachers in the school.</li>
-                <li>Students are not allowed to engage any of the staff members of the school for private tuitions. If an exemption is needed for a particular student, he/she should get explicit written permission from the Principal. Students who engage teachers of the school for private tuitions without the permission of the Principal are liable to disciplinary action, even to the extent of expulsion from the school.</li>
-                <li>Complaints, if any, should be made in writing personally to the Principal, and not to the teachers. We do not act on any anonymous letters.</li>
-                <li>In matters of evaluating and estimating examination answers, as well as decisions with respect to promotions, the opinion of the Principal and the management is in the best interest of your child. Therefore, kindly refrain from requesting personal scrutiny of answer papers, for re-valuation and also for promotion against the better judgement of the authorities.</li>
-                <li>No pupil will be allowed to remain absent from games and physical activities without a written note from a doctor, which is to be renewed every two months.</li>
-              </ul>
-            </div>
-
-            <!-- Absence -->
+            <!-- Single combined card: Rules and Discipline + Recommendation to Parents + Absence -->
             <div class="card-premium p-4 p-lg-5 reveal">
-              <h4 class="mb-4"><i class="fa-solid fa-diamond text-danger me-2" style="font-size:12px"></i>Absence</h4>
-              <ul class="check-list mb-0" style="gap:0">
-                <li>Students are not allowed to leave the school premises without the permission of the Principal/Vice Principal.</li>
-                <li>No leave of absence is granted, except on written application from parents. Mere sending of an application is not sufficient  the sanction of leave must be obtained.</li>
-                <li>In case of illness, a medical certificate must be produced within three days of absence of the student. The school accepts medical certificates of doctors in government service, not below the rank of chief physician or surgeon. In case of any doubt, the school may insist on the child being examined by the civil surgeon or the school doctor.</li>
-                <li>No examination or Unit test/Periodic test will be held for absentees before or after the scheduled time.</li>
-                <li>Pupils are required to appear for all the examinations as scheduled. Students absent for an examination for any reason whatsoever will not be re-examined. In case of absence due to illness, a doctor's certificate is required. Absence for any other reason will not be acceptable.</li>
-              </ul>
+
+              <div class="curriculum-section">
+                <h4 class="mb-4"><i class="fa-solid fa-diamond text-danger me-2" style="font-size:12px"></i>Rules and Discipline</h4>
+                <ul class="check-list mb-0" style="gap:0">
+                  <li>It is the duty of all students to keep their classrooms and other places around the school clean and orderly. They should cultivate a habit of using the dustbin.</li>
+                  <li>No student is allowed to play with chalk or write on the black board unless asked to do so by the teacher.</li>
+                  <li>Students are not allowed to enter classrooms other than their own.</li>
+                  <li>Students are to maintain silence in the school campus, especially in the classrooms, library, labs and verandas. They should not run about when they go in or come out of class to assembly, labs, ground etc. Running and shouting inside the school building is forbidden and unbecoming.</li>
+                  <li>When they go for the assembly, they should go silently, in line, one after the other.</li>
+                  <li>During the recess, pupils are expected to leave the classrooms and go to the playground.</li>
+                  <li>No student will leave his or her class in between the teaching periods.</li>
+                  <li>Students are not allowed to bring mobile phones, pen drives, Walkman, tapes, CD etc. to school. These will automatically be confiscated and will not be returned.</li>
+                  <li>Students will be sent back home in the absence of a written explanation from their parents for being late and without proper uniform. The school accepts no responsibility if a child is asked to return home during school hours for being late or for non-compliance of any of the rules contained in the school diary.</li>
+                </ul>
+              </div>
+
+              <hr class="curriculum-divider">
+
+              <div class="curriculum-section">
+                <h4 class="mb-4"><i class="fa-solid fa-diamond text-danger me-2" style="font-size:12px"></i>Recommendation to Parents</h4>
+                <ul class="check-list mb-0" style="gap:0">
+                  <li>Parents are expected to cooperate in the efforts of the school regarding regularity, punctuality and discipline.</li>
+                  <li>Parents are particularly expected to sign the terminal reports or any other similar documents when required.</li>
+                  <li>Parents and guardians are recommended to call at the Principal's office at least once in each term, so as to ascertain from the school authorities what has been the conduct and progress of their ward.</li>
+                  <li>Tuitions are playing havoc with the lives of children. They have no time to do any self study; instead they waste away their precious time. The growing-up mind is being polluted in different ways. Hence encourage children to form the habit of self study and to clarify their doubts from their own subject teachers in the school.</li>
+                  <li>Students are not allowed to engage any of the staff members of the school for private tuitions. If an exemption is needed for a particular student, he/she should get explicit written permission from the Principal. Students who engage teachers of the school for private tuitions without the permission of the Principal are liable to disciplinary action, even to the extent of expulsion from the school.</li>
+                  <li>Complaints, if any, should be made in writing personally to the Principal, and not to the teachers. We do not act on any anonymous letters.</li>
+                  <li>In matters of evaluating and estimating examination answers, as well as decisions with respect to promotions, the opinion of the Principal and the management is in the best interest of your child. Therefore, kindly refrain from requesting personal scrutiny of answer papers, for re-valuation and also for promotion against the better judgement of the authorities.</li>
+                  <li>No pupil will be allowed to remain absent from games and physical activities without a written note from a doctor, which is to be renewed every two months.</li>
+                </ul>
+              </div>
+
+              <hr class="curriculum-divider">
+
+              <div class="curriculum-section">
+                <h4 class="mb-4"><i class="fa-solid fa-diamond text-danger me-2" style="font-size:12px"></i>Absence</h4>
+                <ul class="check-list mb-0" style="gap:0">
+                  <li>Students are not allowed to leave the school premises without the permission of the Principal/Vice Principal.</li>
+                  <li>No leave of absence is granted, except on written application from parents. Mere sending of an application is not sufficient  the sanction of leave must be obtained.</li>
+                  <li>In case of illness, a medical certificate must be produced within three days of absence of the student. The school accepts medical certificates of doctors in government service, not below the rank of chief physician or surgeon. In case of any doubt, the school may insist on the child being examined by the civil surgeon or the school doctor.</li>
+                  <li>No examination or Unit test/Periodic test will be held for absentees before or after the scheduled time.</li>
+                  <li>Pupils are required to appear for all the examinations as scheduled. Students absent for an examination for any reason whatsoever will not be re-examined. In case of absence due to illness, a doctor's certificate is required. Absence for any other reason will not be acceptable.</li>
+                </ul>
+              </div>
+
             </div>
 
           </div>

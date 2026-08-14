@@ -26,6 +26,74 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/theme-retro.css">
+  <style>
+    /* ============ Magazine-style Layout (Flexbox version - overrides theme-retro.css safely) ============ */
+    .message-card .msg-body .msg-top {
+      display: flex;
+      align-items: flex-start;
+      gap: 32px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+
+    .message-card .msg-body .msg-photo-block {
+      flex: 0 0 340px;
+      width: 340px;
+      max-width: 100%;
+    }
+
+    .message-card .msg-body .msg-photo-block .profile-avatar {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 14px;
+      border: 3px solid var(--gold);
+      object-fit: cover;
+    }
+
+    .message-card .msg-body .msg-photo-block .msg-profile-info {
+      margin-top: 14px;
+      text-align: center;
+    }
+
+    .message-card .msg-body .msg-photo-block .msg-profile-info h5 {
+      margin: 0 0 4px;
+      font-family: var(--font-head);
+      font-weight: 800;
+      color: var(--navy);
+      font-size: 1.05rem;
+    }
+
+    .message-card .msg-body .msg-photo-block .msg-profile-info .role {
+      color: var(--gold-2);
+      font-weight: 600;
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+
+    .message-card .msg-body .msg-photo-block .msg-profile-info .bio {
+      color: var(--muted);
+      font-size: 12.5px;
+      margin: 0;
+    }
+
+    .message-card .msg-body .msg-intro {
+      flex: 1 1 320px;
+      min-width: 280px;
+    }
+
+    @media (max-width: 768px) {
+      .message-card .msg-body .msg-top {
+        flex-direction: column;
+      }
+      .message-card .msg-body .msg-photo-block {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 340px;
+        margin: 0 auto;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -33,59 +101,71 @@
 
   <main>
     <section class="page-hero">
-      <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=2070&auto=format&fit=crop')"></div>
+      <div class="bg" style="background-image:url('assets/img/banner-image.jpeg')"></div>
       <div class="container">
-        <h1 class="reveal">Principal's Message</h1>
+        <h1 class="reveal">Principal Message</h1>
         <div class="crumbs reveal delay-1 mt-4"><a href="index.html">Home</a><span class="sep">/</span><span>Principal's Message</span></div>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <div class="row g-5">
-          <div class="col-lg-8">
+        <div class="row g-5 justify-content-center">
+          <div class="col-lg-10">
             <div class="message-card reveal-left">
+
               <div class="msg-body">
-                <span class="eyebrow">From the Principal</span>
-                <h2 class="section-title mb-4">A Warm Welcome to the <span class="g"> Francis Family</span></h2>
-                <p>“Knowledge is power. Information is liberating. Education is the premise of progress, in every society, in every family.” – Kofi Annan</p>
-                <p>It is important to emphasize that the purpose of education was never to generate as many people who are trained for new jobs as possible, but rather to spawn more individuals who will have the potential to think for themselves and seek the truth, which will further result in improvement, both in their individual lives and the country’s entire political community.</p>
+
+                <div class="msg-top">
+                  <!-- Photo block -->
+                  <div class="msg-photo-block">
+                    <img class="profile-avatar" src="assets/img/Principal.jpg" alt="Principal Rev. Fr. Suresh D'Souza">
+                    <div class="msg-profile-info">
+                      <h5>Rev. Fr. Suresh D'Souza</h5>
+                      <!-- <div class="role">M.A., M.Ed., Ph.D. (Education)</div> -->
+                      <!-- <p class="bio">Principal since 2008 · 8 years in education ·</p> -->
+                    </div>
+                  </div>
+
+                  <!-- Quote + intro beside the photo -->
+                  <div class="msg-intro">
+                    <!-- <span class="eyebrow">From the Principal</span> -->
+                    <h2 class="section-title mb-4">"Knowledge is power. Information is liberating. Education is the premise of progress, in every society, in every family."<span class="g"> - Kofi Annan</span></h2>
+                    <!-- <p>&ldquo;Knowledge is power. Information is liberating. Education is the premise of progress, in every society, in every family.&rdquo; &ndash; Kofi Annan</p> -->
+                  </div>
+                </div>
+
+                <!-- Remaining paragraphs, full width -->
+                <p>It is important to emphasize that the purpose of education was never to generate as many people who are trained for new jobs as possible, but rather to spawn more individuals who will have the potential to think for themselves and seek the truth, which will further result in improvement, both in their individual lives and the country's entire political community.</p>
                 <p>lead the learning process. Please feel free to contact me to share constructive suggestions and matters of individual concern if any. We appreciate your flexibility and support. I pray and wish that with God at our side, we shall live with hope and confidence and look forward to living a life of peace and love to create a healthy society. We entrust our institution and all its members the care of our heavenly patron St.Francis of Asisi.</p>
-                <p>Having this in mind, we can say that education should not be perceived as a process of meeting a set of obligations at school, but rather as a process that, regardless of our grades, helps us fully understand the world in which we ought to live and work. My thanks to teachers for updating themselves with new learning techniques and their effort in maintaining and improving our students’ readiness to return to a learning atmosphere. Our students have adapted following new procedures, utilizing their technological knowledge, problem solving skills and so much more. The School believes in providing top quality education coupled with holistic growth of a child and aims to create a successful global citizen. In today’s dynamic world when every moment a new innovation in technology is evolved, the School provides ample opportunities to students to innovate and think critically and</p>
-                <p>Yet, the heart of our education remains what it has always been ” values. In a world that often celebrates the shallow, we choose to celebrate character. Every Francisite is taught the language of respect, the practice of gratitude and the courage to stand up for what is right.</p>
-                <p>I invite you to visit our campus, walk our corridors and feel the warmth of our community. When you do, you will understand why our motto ” <i>"Lumen et Veritas"</i> (Light and Truth)  is not just inscribed on a crest, but lived every single day.</p>
+                <p>Having this in mind, we can say that education should not be perceived as a process of meeting a set of obligations at school, but rather as a process that, regardless of our grades, helps us fully understand the world in which we ought to live and work. My thanks to teachers for updating themselves with new learning techniques and their effort in maintaining and improving our students' readiness to return to a learning atmosphere. Our students have adapted following new procedures, utilizing their technological knowledge, problem solving skills and so much more. The School believes in providing top quality education coupled with holistic growth of a child and aims to create a successful global citizen. In today's dynamic world when every moment a new innovation in technology is evolved, the School provides ample opportunities to students to innovate and think critically and</p>
+                <p>Yet, the heart of our education remains what it has always been &rdquo; values. In a world that often celebrates the shallow, we choose to celebrate character. Every Francisite is taught the language of respect, the practice of gratitude and the courage to stand up for what is right.</p>
+                <p>I invite you to visit our campus, walk our corridors and feel the warmth of our community. When you do, you will understand why our motto &rdquo; <i>"Lumen et Veritas"</i> (Light and Truth)  is not just inscribed on a crest, but lived every single day.</p>
                 <p>Warm regards,<br><span class="signature">Rev. Fr. Suresh D'Souza</span><br><small class="text-muted">Principal, St. Francis School</small></p>
               </div>
+
+              <!-- <div class="card-premium p-4 reveal-right delay-1">
+                <h5 class="mb-3"><i class="fa-solid fa-graduation-cap text-primary me-2"></i>Educational Philosophy</h5>
+                <ul class="check-list mb-0">
+                  <li>Every child is intelligent  in different ways</li>
+                  <li>Learning should be joyful, not burdensome</li>
+                  <li>Discipline through self-respect, not fear</li>
+                  <li>Teachers are mentors and lifelong learners</li>
+                </ul>
+              </div> -->
+              <!-- <div class="card-premium p-4 reveal-right delay-2 mt-4">
+                <h5 class="mb-3"><i class="fa-solid fa-flag text-warning me-2"></i>Leadership Vision</h5>
+                <p class="small mb-3">Build a school that is a model of 21st-century education  future-ready in technology, timeless in values.</p>
+                <div class="d-flex gap-2 flex-wrap">
+                  <span class="badge rounded-pill" style="background:rgba(37,99,235,.12);color:var(--royal-2)">Innovation</span>
+                  <span class="badge rounded-pill" style="background:rgba(251,191,36,.18);color:var(--gold-2)">Values</span>
+                  <span class="badge rounded-pill" style="background:rgba(16,185,129,.12);color:var(--green)">Inclusion</span>
+                  <span class="badge rounded-pill" style="background:rgba(239,68,68,.12);color:var(--red)">Excellence</span>
+                </div>
+              </div> -->
+
             </div>
           </div>
-
-          <div class="col-lg-4">
-            <div class="card-premium profile-card reveal-right mb-4">
-              <img class="profile-avatar" src="assets/img/Principal.jpg" alt="Principal Rev. Fr. Suresh D'Souza">
-              <h5>Rev. Fr. Suresh D'Souza</h5>
-              <div class="role">M.A., M.Ed., Ph.D. (Education)</div>
-              <p class="bio">Principal since 2008 · 8 years in education ·</p>
-            </div>
-            <!-- <div class="card-premium p-4 reveal-right delay-1">
-              <h5 class="mb-3"><i class="fa-solid fa-graduation-cap text-primary me-2"></i>Educational Philosophy</h5>
-              <ul class="check-list mb-0">
-                <li>Every child is intelligent  in different ways</li>
-                <li>Learning should be joyful, not burdensome</li>
-                <li>Discipline through self-respect, not fear</li>
-                <li>Teachers are mentors and lifelong learners</li>
-              </ul>
-            </div> -->
-            <!-- <div class="card-premium p-4 reveal-right delay-2 mt-4">
-              <h5 class="mb-3"><i class="fa-solid fa-flag text-warning me-2"></i>Leadership Vision</h5>
-              <p class="small mb-3">Build a school that is a model of 21st-century education  future-ready in technology, timeless in values.</p>
-              <div class="d-flex gap-2 flex-wrap">
-                <span class="badge rounded-pill" style="background:rgba(37,99,235,.12);color:var(--royal-2)">Innovation</span>
-                <span class="badge rounded-pill" style="background:rgba(251,191,36,.18);color:var(--gold-2)">Values</span>
-                <span class="badge rounded-pill" style="background:rgba(16,185,129,.12);color:var(--green)">Inclusion</span>
-                <span class="badge rounded-pill" style="background:rgba(239,68,68,.12);color:var(--red)">Excellence</span>
-              </div>
-            </div>
-          </div> -->
         </div>
       </div>
     </section>

@@ -6,7 +6,7 @@
   "use strict";
 
   var SITE = {
-  name: "St. Francis School",
+  name: "St. Francis School, Sadabad",
   short: "SFS",
   tagline: "Knowledge • Discipline • Service",
   phone: "+91 9119772205",
@@ -16,7 +16,7 @@
   address: "Sadabad,Uttar Pradesh, India",
   hours: "Mon – Sat : 8:00 AM – 4:00 PM",
   affiliation: "CBSE Affiliated School",
-  schoolCode: "Sadabad",
+  schoolCode: "SFSSBD",
   whatsapp: "9119772205"
 };
 
@@ -63,7 +63,7 @@ var LOGO = '<img src="assets/img/logo.png" alt="St. Francis School Logo" class="
       '<div class="container">',
       '<a class="navbar-brand" href="index.html">',
       '<span class="brand-logo">' + LOGO + "</span>",
-      '<span class="brand-text"><b>St. Francis</b><small> School</small></span>',
+      '<span class="brand-text"><b>St. Francis School, Sadabad</b>',
       "</a>",
 
       '<div class="nav-actions d-lg-none">',
@@ -183,7 +183,7 @@ var LOGO = '<img src="assets/img/logo.png" alt="St. Francis School Logo" class="
       '<div class="col-lg-4 col-md-6">',
       '<div class="d-flex align-items-center gap-3 mb-4">',
       '<span class="brand-logo" style="width:60px;height:60px;flex:0 0 60px;filter:drop-shadow(0 4px 10px rgba(0,0,0,.3))">' + LOGO + "</span>",
-      '<span class="brand-text"><b style="color:#fff">St. Francis</b><small> School</small></span>',
+      '<span class="brand-text"><b style="color:#fff">St. Francis School, Sadabad</b></span>',
       "</div>",
       "<p style='color:rgba(255,255,255,.7)'>An institution committed to academic excellence, character building and holistic development. Empowering every child to become a global citizen with strong values.</p>",
       '<div class="footer-social mt-4">',

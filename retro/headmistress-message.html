@@ -26,6 +26,74 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/theme-retro.css">
+  <style>
+    /* ============ Magazine-style Layout (Flexbox version - overrides theme-retro.css safely) ============ */
+    .message-card .msg-body .msg-top {
+      display: flex;
+      align-items: flex-start;
+      gap: 32px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+
+    .message-card .msg-body .msg-photo-block {
+      flex: 0 0 340px;
+      width: 340px;
+      max-width: 100%;
+    }
+
+    .message-card .msg-body .msg-photo-block .profile-avatar {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 14px;
+      border: 3px solid var(--gold);
+      object-fit: cover;
+    }
+
+    .message-card .msg-body .msg-photo-block .msg-profile-info {
+      margin-top: 14px;
+      text-align: center;
+    }
+
+    .message-card .msg-body .msg-photo-block .msg-profile-info h5 {
+      margin: 0 0 4px;
+      font-family: var(--font-head);
+      font-weight: 800;
+      color: var(--navy);
+      font-size: 1.05rem;
+    }
+
+    .message-card .msg-body .msg-photo-block .msg-profile-info .role {
+      color: var(--gold-2);
+      font-weight: 600;
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+
+    .message-card .msg-body .msg-photo-block .msg-profile-info .bio {
+      color: var(--muted);
+      font-size: 12.5px;
+      margin: 0;
+    }
+
+    .message-card .msg-body .msg-intro {
+      flex: 1 1 320px;
+      min-width: 280px;
+    }
+
+    @media (max-width: 768px) {
+      .message-card .msg-body .msg-top {
+        flex-direction: column;
+      }
+      .message-card .msg-body .msg-photo-block {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 340px;
+        margin: 0 auto;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -33,7 +101,7 @@
 
   <main>
     <section class="page-hero">
-      <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2070&auto=format&fit=crop')"></div>
+      <div class="bg" style="background-image:url('assets/img/banner-image.jpeg')"></div>
       <div class="container">
         <h1 class="reveal">Manager Message</h1>
         <div class="crumbs reveal delay-1 mt-4"><a href="index.html">Home</a><span class="sep">/</span><span>Manager Message</span></div>
@@ -42,46 +110,60 @@
 
     <section class="section">
       <div class="container">
-        <div class="row g-5">
-          <div class="col-lg-8 order-lg-2">
+        <div class="row g-5 justify-content-center">
+          <div class="col-lg-10">
             <div class="message-card reveal-right">
+
               <div class="msg-body">
-                <span class="eyebrow">From the Manager</span>
-                <h2 class="section-title mb-4">“An investment in knowledge pays the best interest.” <span class="g">- Benjamin Franklin</span></h2>
-                <p>My heart fills with immense pleasure as I perceive the progress being made by the St.Francis school, Sadabad.</p>
+
+                <div class="msg-top">
+                  <!-- Photo block -->
+                  <div class="msg-photo-block">
+                    <img class="profile-avatar" src="assets/img/manager.jpg" alt="Manager Rev. Fr. STANY RODRIGUES">
+                    <div class="msg-profile-info">
+                      <h5>REV.FR.STANY RODRIGUES</h5>
+                      <!-- <div class="role">M.A., B.Ed. · Early Childhood Expert</div> -->
+                      <!-- <p class="bio">Manager since 2018 · 25 years dedicated to child development and positive schooling.</p> -->
+                    </div>
+                  </div>
+
+                  <!-- Quote + intro paragraph beside the photo -->
+                  <div class="msg-intro">
+                    <!-- <span class="eyebrow">From the Manager</span> -->
+                    <h2 class="section-title mb-4">&ldquo;An investment in knowledge pays the best interest.&rdquo; <span class="g">- Benjamin Franklin</span></h2>
+                    <!-- <p>My heart fills with immense pleasure as I perceive the progress being made by the St.Francis school, Sadabad.</p> -->
+                  </div>
+                </div>
+
+                <!-- Remaining paragraphs, full width -->
+                <p>My heart fills with immense pleasure as I perceive the progress being made by the St.Francis school, Sadabad. I feel much contended after bearing in mind the progress the School has made by imbibing in its students value based education synergized with modern teaching-learning technology to produce a generation of well informed and emotionally sound generation during these years. </p>
+
                 <p>Education and literacy are the two fac es of a coin. We have to be more educated along with being literate. A literate person needs to be educated and an educated person needs to be literate. As human beings, we are people of hope, faith and conviction. We are of a strong opinion that everything is going to be alright one day and as with every problem and tribulation this too shall pass.The cooperation and association of parents, as well as all the stakeholders towards this institution, are commendable. </p>
-                <p>Your involv ement enhances the functioning of the school intact and consistent. We are created in the image and likeness of God, which demands mutual respect, love and understanding of every human being.</p>
+                <p>Your involvement enhances the functioning of the school intact and consistent. We are created in the image and likeness of God, which demands mutual respect, love and understanding of every human being.</p>
                 <p>We need to shun the walls of hateful and divisive ways. Moreover, we need to garner respect, love and brotherhood in our pursuit of life.</p>
                 <p> In this temple of learning we stress on inculcating values and virtues to make our children competent, confident and ready to face the world with courage.</p>
                 <p>Let us love one another and win the hearts of all!</p>
                 <p>With warm regards,<br><span class="signature">REV.FR.STANY RODRIGUES</span><br><small class="text-muted">Manager, St. Francis School</small></p>
               </div>
-            </div>
-          </div>
 
-          <div class="col-lg-4 order-lg-1">
-            <div class="card-premium profile-card reveal-left mb-4">
-              <img class="profile-avatar" src="assets/img/manager.jpg" alt="Manager Rev. Fr. STANY RODRIGUES">
-              <h5>REV.FR.STANY RODRIGUES</h5>
-              <div class="role">M.A., B.Ed. · Early Childhood Expert</div>
-              <p class="bio">Manager since 2018 · 25 years dedicated to child development and positive schooling.</p>
+              <!-- <div class="card-premium p-4 reveal-left delay-1 mb-4">
+                <h5 class="mb-3"><i class="fa-solid fa-heart text-danger me-2"></i>Student Development Goals</h5>
+                <ul class="check-list mb-0">
+                  <li>Confidence in self-expression</li>
+                  <li>Curiosity &amp; love for learning</li>
+                  <li>Empathy &amp; emotional resilience</li>
+                  <li>Healthy habits &amp; discipline</li>
+                </ul>
+              </div> -->
+              <!-- <div class="card-premium p-4 reveal-left delay-2">
+                <h5 class="mb-3"><i class="fa-solid fa-users text-primary me-2"></i>Leadership Focus</h5>
+                <p class="small mb-2">Creating joyful, child-first classrooms where every teacher is a nurturer and every child is seen.</p>
+                <div class="progress mb-2" style="height:8px;border-radius:8px;background:var(--bg-soft)">
+                  <div class="progress-bar" style="width:95%;border-radius:8px;background:var(--grad-gold)" role="progressbar"></div>
+                </div><small class="text-muted">Teacher-parent communication satisfaction 95%</small>
+              </div> -->
+
             </div>
-            <!-- <div class="card-premium p-4 reveal-left delay-1 mb-4">
-              <h5 class="mb-3"><i class="fa-solid fa-heart text-danger me-2"></i>Student Development Goals</h5>
-              <ul class="check-list mb-0">
-                <li>Confidence in self-expression</li>
-                <li>Curiosity &amp; love for learning</li>
-                <li>Empathy &amp; emotional resilience</li>
-                <li>Healthy habits &amp; discipline</li>
-              </ul>
-            </div> -->
-            <!-- <div class="card-premium p-4 reveal-left delay-2">
-              <h5 class="mb-3"><i class="fa-solid fa-users text-primary me-2"></i>Leadership Focus</h5>
-              <p class="small mb-2">Creating joyful, child-first classrooms where every teacher is a nurturer and every child is seen.</p>
-              <div class="progress mb-2" style="height:8px;border-radius:8px;background:var(--bg-soft)">
-                <div class="progress-bar" style="width:95%;border-radius:8px;background:var(--grad-gold)" role="progressbar"></div>
-              </div><small class="text-muted">Teacher-parent communication satisfaction 95%</small>
-            </div> -->
           </div>
         </div>
       </div>
