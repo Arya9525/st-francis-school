@@ -156,8 +156,8 @@ p { color: var(--muted); }
 [data-theme="dark"] .brand-text b { color: #fff; }
 
 .navbar-main .nav-link {
-  font-weight: 600; font-size: 14.5px; color: var(--navy) !important;
-  padding: 26px 14px !important; position: relative;
+  font-weight: 600; font-size: 12.5px; color: var(--navy) !important;
+  padding: 26px 12px !important; position: relative;
 }
 [data-theme="dark"] .navbar-main .nav-link { color: #fff !important; }
 .navbar-main .nav-link::after {
@@ -185,7 +185,7 @@ p { color: var(--muted); }
 
 .nav-actions { display: flex; align-items: center; gap: 10px; }
 .icon-btn {
-  width: 36px; height: 36px; border-radius: 12px; border: 1px solid var(--border);
+  width: 33px; height: 33px; border-radius: 12px; border: 1px solid var(--border);
   background: var(--bg-soft); color: var(--navy); display: inline-flex; align-items: center; justify-content: center;
   cursor: pointer; font-size: 16px; transition: .3s;
 }
@@ -195,7 +195,7 @@ p { color: var(--muted); }
 .portal-btn {
   display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 11px;
   color: var(--navy); border: 1px solid var(--border); background: var(--bg-soft);
-  padding: 9px 16px; border-radius: 12px; transition: .3s;
+  padding: 7px 13px; border-radius: 12px; transition: .3s;
 }
 .portal-btn:hover { background: var(--royal); color: #fff; border-color: var(--royal); }
 [data-theme="dark"] .portal-btn { color: #fff; }
