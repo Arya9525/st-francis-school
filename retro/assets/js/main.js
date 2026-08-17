@@ -60,7 +60,7 @@
     var wa = document.getElementById("fabWhatsapp");
     if (wa && window.SXIS && window.SXIS.SITE) {
       wa.addEventListener("click", function () {
-        var msg = encodeURIComponent("Hello! I would like to know more about admissions at St. Francis School.");
+        var msg = encodeURIComponent("Hello! I would like to know more about admissions at St. Francis Secondary School.");
         window.open("https://wa.me/" + window.SXIS.SITE.whatsapp + "?text=" + msg, "_blank");
       });
     }

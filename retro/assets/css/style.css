@@ -580,6 +580,16 @@ p { color: var(--muted); }
   z-index: 1; 
   padding-left: 20px; 
 }
+.ticker-track span {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: .5px;
+  color: rgba(255, 255, 255, .9);
+}
 
 .ticker:hover .ticker-track {
   animation-play-state: paused;

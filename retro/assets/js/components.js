@@ -6,17 +6,17 @@
   "use strict";
 
   var SITE = {
-  name: "St. Francis School, Sadabad",
+  name: "St. Francis Secondary School, Sadabad",
   short: "SFS",
   tagline: "Knowledge • Discipline • Service",
   phone: "+91 9119772205",
-  altPhone: "+91 9119772205",
+  altPhone: "+91 9058491199",
   email: "sfssadabad@gmail.com",
   admissionsEmail: "sfssadabad@gmail.com",
   address: "Sadabad,Uttar Pradesh, India",
-  hours: "Mon – Sat : 8:00 AM – 4:00 PM",
+  hours: "Mon – Sat : 7:00 AM – 1:00 PM",
   affiliation: "CBSE Affiliated School",
-  schoolCode: "SFSSBD",
+  schoolCode: "61698",
   whatsapp: "9119772205"
 };
 
@@ -30,7 +30,7 @@
     return href === PAGE;
   }
 
-var LOGO = '<img src="assets/img/logo.png" alt="St. Francis School Logo" class="school-logo">';
+var LOGO = '<img src="assets/img/logo.png" alt="St. Francis Secondary School Logo" class="school-logo">';
 
   function navItem(href, label, cls) {
     var active = isActive(href) ? " active" : "";
@@ -48,12 +48,12 @@ var LOGO = '<img src="assets/img/logo.png" alt="St. Francis School Logo" class="
       '<div class="topbar-right d-flex align-items-center gap-3 flex-wrap">',
       '<a href="tel:+919119772205"><i class="fa-solid fa-phone me-1"></i>' + SITE.phone + "</a>",
       '<a href="mailto:info@sxis.edu.in"><i class="fa-solid fa-envelope me-1"></i>' + SITE.email + "</a>",
-      '<span class="d-none d-md-inline"><i class="fa-solid fa-clock me-1"></i>' + SITE.hours + "</span>",
+      // '<span class="d-none d-md-inline"><i class="fa-solid fa-clock me-1"></i>' + SITE.hours + "</span>",
       '<div class="socials">',
       '<a href="https://www.facebook.com/sfssadabad?mibextid=ZbWKwL" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>',
       '<a href="https://www.instagram.com/sfssadabad" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>',
       '<a href="https://www.youtube.com/@st.francisschoolsadabad2650" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>',
-      '<a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>',
+      // '<a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>',
       "</div>",
       "</div></div></div>",
 
@@ -63,11 +63,11 @@ var LOGO = '<img src="assets/img/logo.png" alt="St. Francis School Logo" class="
       '<div class="container">',
       '<a class="navbar-brand" href="index.html">',
       '<span class="brand-logo">' + LOGO + "</span>",
-      '<span class="brand-text"><b>St. Francis School, Sadabad</b>',
+      '<span class="brand-text"><b>St. Francis Secondary School, Sadabad</b>',
       "</a>",
 
       '<div class="nav-actions d-lg-none">',
-      '<button class="icon-btn" data-theme-toggle aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>',
+      // '<button class="icon-btn" data-theme-toggle aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>',
       '<button class="navbar-toggler icon-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>',
       "</div>",
 
@@ -104,20 +104,20 @@ var LOGO = '<img src="assets/img/logo.png" alt="St. Francis School Logo" class="
       "</ul>",
       "</div>",
 
-      '<div class="nav-actions d-none d-lg-flex">',
-      '<button class="icon-btn" data-theme-toggle aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>',
-      '<div class="dropdown">',
-      '<button class="portal-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-user-lock"></i> Portals</button>',
-      '<ul class="dropdown-menu dropdown-menu-end">',
-      '<li><a class="dropdown-item" href="#"><i class="fa-solid fa-graduation-cap me-2 text-primary"></i>Student Portal</a></li>',
-      '<li><a class="dropdown-item" href="#"><i class="fa-solid fa-users me-2 text-success"></i>Parent Portal</a></li>',
-      '<li><a class="dropdown-item" href="#"><i class="fa-solid fa-chalkboard-user me-2 text-warning"></i>Teacher Portal</a></li>',
-      '<li><hr class="dropdown-divider"></li>',
-      '<li><a class="dropdown-item" href="#"><i class="fa-solid fa-wallet me-2 text-danger"></i>Fee Payment</a></li>',
-      "</ul></div>",
-      '<a class="nav-cta" href="admissions.html">Admission</a>',
-      "</div>",
-      "</div>",
+      // '<div class="nav-actions d-none d-lg-flex">',
+      // '<button class="icon-btn" data-theme-toggle aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>',
+      // '<div class="dropdown">',
+      // '<button class="portal-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-user-lock"></i> Portals</button>',
+      // '<ul class="dropdown-menu dropdown-menu-end">',
+      // '<li><a class="dropdown-item" href="#"><i class="fa-solid fa-graduation-cap me-2 text-primary"></i>Student Portal</a></li>',
+      // '<li><a class="dropdown-item" href="#"><i class="fa-solid fa-users me-2 text-success"></i>Parent Portal</a></li>',
+      // '<li><a class="dropdown-item" href="#"><i class="fa-solid fa-chalkboard-user me-2 text-warning"></i>Teacher Portal</a></li>',
+      // '<li><hr class="dropdown-divider"></li>',
+      // '<li><a class="dropdown-item" href="#"><i class="fa-solid fa-wallet me-2 text-danger"></i>Fee Payment</a></li>',
+      // "</ul></div>",
+      // '<a class="nav-cta" href="admissions.html">Admission</a>',
+      // "</div>",
+      // "</div>",
       "</nav>",
 
       /* Mobile offcanvas nav */
@@ -159,13 +159,13 @@ var LOGO = '<img src="assets/img/logo.png" alt="St. Francis School Logo" class="
       navItem("contact.html", "Contact Us"),
       "</ul>",
       '<hr>',
-      '<a class="btn btn-premium w-100" href="admissions.html"><i class="fa-solid fa-pen-to-square"></i> Apply for Admission</a>',
-      '<div class="d-grid gap-2 mt-3">',
-      '<button class="portal-btn w-100 justify-content-center"><i class="fa-solid fa-user-lock"></i> Student / Parent Portal</button>',
-      '<button class="portal-btn w-100 justify-content-center"><i class="fa-solid fa-wallet"></i> Online Fee Payment</button>',
-      "</div>",
-      '<div class="mt-4"><small class="text-muted">Call us: <a href="tel:+919876543210">' + SITE.phone + "</a></small></div>",
-      "</div></div></div>"
+      // '<a class="btn btn-premium w-100" href="admissions.html"><i class="fa-solid fa-pen-to-square"></i> Apply for Admission</a>',
+      // '<div class="d-grid gap-2 mt-3">',
+      // '<button class="portal-btn w-100 justify-content-center"><i class="fa-solid fa-user-lock"></i> Student / Parent Portal</button>',
+      // '<button class="portal-btn w-100 justify-content-center"><i class="fa-solid fa-wallet"></i> Online Fee Payment</button>',
+      // "</div>",
+      // '<div class="mt-4"><small class="text-muted">Call us: <a href="tel:+919876543210">' + SITE.phone + "</a></small></div>",
+      // "</div></div></div>"
     ].join("");
   }
 
@@ -183,7 +183,7 @@ var LOGO = '<img src="assets/img/logo.png" alt="St. Francis School Logo" class="
       '<div class="col-lg-4 col-md-6">',
       '<div class="d-flex align-items-center gap-3 mb-4">',
       '<span class="brand-logo" style="width:60px;height:60px;flex:0 0 60px;filter:drop-shadow(0 4px 10px rgba(0,0,0,.3))">' + LOGO + "</span>",
-      '<span class="brand-text"><b style="color:#fff">St. Francis School, Sadabad</b></span>',
+      '<span class="brand-text"><b style="color:#fff">St. Francis Secondary School, Sadabad</b></span>',
       "</div>",
       "<p style='color:rgba(255,255,255,.7)'>An institution committed to academic excellence, character building and holistic development. Empowering every child to become a global citizen with strong values.</p>",
       '<div class="footer-social mt-4">',
@@ -250,7 +250,7 @@ var LOGO = '<img src="assets/img/logo.png" alt="St. Francis School Logo" class="
       "</div>",
 
       '<div class="footer-bottom d-flex flex-wrap justify-content-between gap-2">',
-      "<span>&copy; 2026 St. Francis School. All Rights Reserved.</span>",
+      "<span>&copy; 2026 St. Francis Secondary School. All Rights Reserved.</span>",
       '<span><a href="#" class="text-white-50">Privacy Policy</a> · <a href="#" class="text-white-50">Terms of Use</a> · <a href="sitemap.html" class="text-white-50">Sitemap</a></span>',
       "</div>",
       "</div></footer>"
