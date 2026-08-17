@@ -1396,3 +1396,44 @@ h1, h2, h3, h4, h5, h6 { letter-spacing: -.015em; }
     flex: 0 0 auto;
   }
 }
+
+@media (max-width: 767.98px) {
+  .navbar-main .navbar-brand {
+    align-items: flex-start;
+    padding: 12px 0;
+  }
+  .navbar-main .brand-text b {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+    font-size: 13.5px;
+    line-height: 1.35;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .topbar .container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    gap: 8px !important;
+  }
+  .topbar-left {
+    width: 100%;
+    display: flex !important;
+    align-items: center !important;
+  }
+  .topbar-right {
+    width: 100%;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 8px 16px !important;
+    margin-left: 0 !important;
+  }
+  .topbar .socials {
+    margin-left: 0 !important;
+  }
+}
