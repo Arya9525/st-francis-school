@@ -123,7 +123,7 @@ var LOGO = '<img src="assets/img/logo.png" alt="St. Francis Secondary School Log
       /* Mobile offcanvas nav */
       '<div class="offcanvas offcanvas-end" tabindex="-1" id="mobileNav">',
       '<div class="offcanvas-header">',
-      '<span class="brand-text"><b>St. Francis</b><small> School</small></span>',
+      '<span class="brand-text"><b>St. Francis Secondary School</b></span>',
       '<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>',
       "</div>",
       '<div class="offcanvas-body">',

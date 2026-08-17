@@ -1434,6 +1434,7 @@ h1, h2, h3, h4, h5, h6 { letter-spacing: -.015em; }
     margin-left: 0 !important;
   }
   .topbar .socials {
-    margin-left: 0 !important;
+    display: none !important;
   }
 }
+
