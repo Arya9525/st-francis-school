@@ -66,8 +66,8 @@ body {
   line-height: 1.7;
   font-size: 16px;
   overflow-x: hidden;
-  overflow-wrap: break-word;
-  word-break: break-word;
+  /* overflow-wrap: break-word; */
+  /* word-break: break-word; */
   -webkit-font-smoothing: antialiased;
   transition: background .4s, color .4s;
 }
