@@ -62,11 +62,25 @@
               </ul>
             </div>
 
-            <div class="text-center reveal-zoom">
-              <a href="assets/docs/Fee-Structure-2026-27.pdf" class="btn-navy" download>
-                <i class="fa-solid fa-file-pdf"></i> Fee Structure 2026&ndash;27
-              </a>
-            </div>
+            <style>
+  #feeDownloadBtn { margin-bottom: 90px; }
+  #feeDownloadSpacer { height: 60px; }
+  @media (max-width: 767.98px) {
+    #feeDownloadBtn {
+      margin-bottom: 160px !important;
+    }
+    #feeDownloadSpacer {
+      height: 140px !important;
+    }
+  }
+</style>
+
+<div id="feeDownloadBtn" class="text-center reveal-zoom" style="position:relative !important; z-index:50 !important; margin-bottom:70px !important; padding-bottom:10px !important;">
+  <a href="assets/docs/Fee-Structure-2026-27.pdf" class="btn-navy" download>
+    <i class="fa-solid fa-file-pdf"></i> Fee Structure 2026&ndash;27
+  </a>
+</div>
+<div id="feeDownloadSpacer" style="height:40px; width:100%; clear:both;"></div>
           </div>
         </div>
       </div>

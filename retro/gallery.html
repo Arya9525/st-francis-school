@@ -16,7 +16,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Gallery | St. Francis Secondary School</title>
-  <meta name="description" content="Photo and video gallery of St. Francis Secondary School — campus, classrooms, sports, cultural events and student life.">
+  <meta name="description" content="Photo albums of St. Francis Secondary School — campus, classrooms, sports, cultural events and student life.">
   <link rel="icon" type="image/svg+xml" href="assets/img/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,63 +26,88 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/theme-retro.css">
+
+  <!-- Page-scoped styles for albums (Gallery page only, does not touch style.css) -->
+  <style>
+    .album-card { cursor: pointer; opacity: 0; animation: albumFadeIn .7s ease forwards; }
+    @keyframes albumFadeIn { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+    .album-card .img-card .overlay { opacity: 1; background: linear-gradient(to top, rgba(46,8,17,.88), transparent 65%); }
+    .album-card .img-card .overlay p { color: rgba(255,255,255,.85); }
+    .album-count-badge {
+      position: absolute; top: 14px; right: 14px; z-index: 2;
+      background: rgba(46,8,17,.72); color: #fff; font-size: 12px; font-weight: 700;
+      padding: 5px 12px; border-radius: 20px; letter-spacing: .3px;
+      display: inline-flex; align-items: center; gap: 6px;
+    }
+    .album-count-badge i { color: var(--gold); font-size: 11px; }
+
+    .album-viewer-grid { columns: 4; column-gap: 16px; }
+    .album-viewer-grid .av-item { break-inside: avoid; margin-bottom: 16px; border-radius: var(--radius); overflow: hidden; cursor: pointer; position: relative; border: 1px solid var(--border); box-shadow: var(--shadow-sm); }
+    .album-viewer-grid .av-item img { width: 100%; display: block; transition: .5s; }
+    .album-viewer-grid .av-item:hover img { transform: scale(1.06); }
+    @media (max-width: 992px) { .album-viewer-grid { columns: 3; } }
+    @media (max-width: 768px) { .album-viewer-grid { columns: 2; } }
+    @media (max-width: 480px) { .album-viewer-grid { columns: 1; } }
+  </style>
 </head>
 <body>
 
   <header data-component></header>
 
   <main>
-    <section class="page-hero">
-      <div class="bg" style="background-image:url('assets/img/banner-image.jpeg')"></div>
-      <div class="container">
-        <h1 class="reveal">School Gallery</h1>
-        <div class="crumbs reveal delay-1 mt-4"><a href="index.html">Home</a><span class="sep">/</span><span>Gallery</span></div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="pill-tabs mb-4" data-scope="gal">
-          <button class="pill active" data-filter="all" data-scope="gal">All</button>
-          <button class="pill" data-filter="campus" data-scope="gal">Rakhi Making Competition</button>
-          <button class="pill" data-filter="classrooms" data-scope="gal">Classroom Activities</button>
-          <button class="pill" data-filter="sports" data-scope="gal">Sports</button>
-          <button class="pill" data-filter="culture" data-scope="gal">Culture</button>
-          <button class="pill" data-filter="events" data-scope="gal">Events</button>
+    <!-- ===================== DEFAULT VIEW: album list ===================== -->
+    <div id="galleryDefaultView">
+      <section class="page-hero">
+        <div class="bg" style="background-image:url('assets/img/banner-image.jpeg')"></div>
+        <div class="container">
+          <h1 class="reveal">School Gallery</h1>
+          <div class="crumbs reveal delay-1 mt-4"><a href="index.html">Home</a><span class="sep">/</span><span>Gallery</span></div>
         </div>
+      </section>
 
-        <div class="masonry" data-filter-grid="gal" data-gallery>
-          <div class="masonry-item reveal" data-cat="campus" data-src="assets/img/sciencelab.jpg" data-caption="Our campus"><img src="assets/img/sciencelab.jpg" alt="Campus"></div>
-          <div class="masonry-item reveal" data-cat="classrooms" data-src="assets/img/p3.jpg" data-caption="Active learning"><img src="assets/img/p3.jpg" alt="Classroom"></div>
-          <div class="masonry-item reveal" data-cat="sports" data-src="assets/img/Voley.jpg" data-caption="Volleyball training"><img src="assets/img/Voley.jpg" alt="Volleyball"></div>
-          <div class="masonry-item reveal" data-cat="culture" data-src="assets/img/Dance.jpg" data-caption="Annual cultural fest"><img src="assets/img/Dance.jpg" alt="Cultural fest"></div>
-          <div class="masonry-item reveal" data-cat="events" data-src="assets/img/Photo34.jpg" data-caption="Science exhibition"><img src="assets/img/Photo34.jpg" alt="Science fair"></div>
-          <div class="masonry-item reveal" data-cat="campus" data-src="assets/img/rk.jpg" data-caption="Digital library"><img src="assets/img/rk.jpg" alt="Library"></div>
-          <div class="masonry-item reveal" data-cat="classrooms" data-src="assets/img/p4.jpg" data-caption="Group projects"><img src="assets/img/p4.jpg" alt="Students working"></div>
-          <div class="masonry-item reveal" data-cat="sports" data-src="assets/img/v2.jpg" data-caption="Athletics day"><img src="assets/img/v2.jpg" alt="Track event"></div>
-          <div class="masonry-item reveal" data-cat="culture" data-src="assets/img/learnful.jpg" data-caption="Diwali celebration"><img src="assets/img/learnful.jpg" alt="Celebration"></div>
-          <div class="masonry-item reveal" data-cat="events" data-src="assets/img/dd.jpg" data-caption="Conference crowd"><img src="assets/img/dd.jpg" alt="Conference"></div>
-          <div class="masonry-item reveal" data-cat="campus" data-src="assets/img/rk2.jpg" data-caption="Book collection"><img src="assets/img/rk2.jpg" alt="Books"></div>
-          <div class="masonry-item reveal" data-cat="sports" data-src="assets/img/v3.jpg" data-caption="Fitness class"><img src="assets/img/v3.jpg" alt="Fitness"></div>
-          <div class="masonry-item reveal" data-cat="culture" data-src="assets/img/d2.jpg" data-caption="Dance performance"><img src="assets/img/d2.jpg" alt="Dance"></div>
-          <div class="masonry-item reveal" data-cat="classrooms" data-src="assets/img/Learning.jpg" data-caption="Smart classroom"><img src="assets/img/Learning.jpg" alt="Smart classroom"></div>
-        </div>
+      <section class="section">
+        <div class="container">
+          <div class="section-head text-center">
+            <span class="eyebrow justify-content-center">Photo Albums</span>
+            <h2 class="section-title">Moments From <span class="g">School Life</span></h2>
+            <p class="section-sub mx-auto" style="text-align:center">Click an album to view all photos.</p>
+          </div>
 
-        <!-- Video section -->
-        <!-- <div class="section-head text-center mt-5 pt-4">
-          <span class="eyebrow justify-content-center">Videos</span>
-          <h2 class="section-title">Watch Our <span class="g">School in Action</span></h2>
+          <div class="row g-4" id="albumGrid" data-stagger>
+            <!-- Albums are rendered here by JS from the ALBUMS data below -->
+          </div>
         </div>
-        <div class="row g-4">
-          <div class="col-lg-6 reveal"><div class="card-premium p-3"><div class="ratio ratio-16x9 rounded-14 overflow-hidden"><iframe src="https://www.youtube.com/embed/scZ3VdCQq6Y" title="Campus tour video" allowfullscreen loading="lazy"></iframe></div><div class="p-3"><h6 class="mb-1">Virtual Campus Tour</h6><small class="text-muted">2 min - Explore our facilities</small></div></div></div>
-          <div class="col-lg-6 reveal delay-1"><div class="card-premium p-3"><div class="ratio ratio-16x9 rounded-14 overflow-hidden"><iframe src="https://www.youtube.com/embed/LIbL2FrG5dA" title="Annual day highlights" allowfullscreen loading="lazy"></iframe></div><div class="p-3"><h6 class="mb-1">Annual Day Highlights 2025</h6><small class="text-muted">4 min - A night to remember</small></div></div></div>
-        </div> -->
-      </div>
-    </section>
+      </section>
+    </div>
+
+    <!-- ===================== ALBUM DETAIL VIEW (hidden until an album is clicked) ===================== -->
+    <div id="albumDetailView" style="display:none">
+      <section class="page-hero">
+        <div class="bg" style="background-image:url('assets/img/banner-image.jpeg')"></div>
+        <div class="container">
+          <h1 class="reveal" id="albumViewerTitle">Album Name</h1>
+          <div class="crumbs reveal delay-1 mt-4">
+            <a href="#" id="albumBack">Gallery</a><span class="sep">/</span><span id="albumViewerCrumb">Album Name</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top:36px">
+        <div class="container">
+          <div class="d-flex justify-content-end mb-4">
+            <button type="button" class="btn-circle" id="albumClose" aria-label="Close album">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <div class="album-viewer-grid" id="albumViewerGrid"></div>
+        </div>
+      </section>
+    </div>
   </main>
 
   <footer data-component></footer>
 
+  <!-- Single-image lightbox with prev/next, scoped to the currently open album -->
   <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
     <span class="lb-close">&times;</span>
     <span class="lb-nav prev">&#10094;</span>
@@ -94,5 +119,179 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/components.js"></script>
   <script src="assets/js/main.js"></script>
+
+  <!-- Album gallery logic: builds album covers, switches to album detail view, opens lightbox -->
+  <script>
+    (function () {
+      var ALBUMS = [
+        {
+          id: "campus",
+          name: "Campus & Library",
+          photos: [
+            { src: "assets/img/sciencelab.jpg", caption: "Our campus" },
+            { src: "assets/img/rk.jpg", caption: "Digital library" },
+            { src: "assets/img/rk2.jpg", caption: "Book collection" }
+          ]
+        },
+        {
+          id: "classrooms",
+          name: "Classroom Activities",
+          photos: [
+            { src: "assets/img/p3.jpg", caption: "Active learning" },
+            { src: "assets/img/p4.jpg", caption: "Group projects" },
+            { src: "assets/img/Learning.jpg", caption: "Smart classroom" }
+          ]
+        },
+        {
+          id: "sports",
+          name: "Sports & Athletics",
+          photos: [
+            { src: "assets/img/Voley.jpg", caption: "Volleyball training" },
+            { src: "assets/img/v2.jpg", caption: "Athletics day" },
+            { src: "assets/img/v3.jpg", caption: "Fitness class" }
+          ]
+        },
+        {
+          id: "culture",
+          name: "Culture & Celebrations",
+          photos: [
+            { src: "assets/img/Dance.jpg", caption: "Annual cultural fest" },
+            { src: "assets/img/learnful.jpg", caption: "Diwali celebration" },
+            { src: "assets/img/d2.jpg", caption: "Dance performance" }
+          ]
+        },
+        {
+          id: "events",
+          name: "School Events",
+          photos: [
+            { src: "assets/img/Photo34.jpg", caption: "Science exhibition" },
+            { src: "assets/img/dd.jpg", caption: "Conference crowd" }
+          ]
+        }
+      ];
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var albumGrid = document.getElementById("albumGrid");
+        var defaultView = document.getElementById("galleryDefaultView");
+        var detailView = document.getElementById("albumDetailView");
+        var albumViewerGrid = document.getElementById("albumViewerGrid");
+        var albumViewerTitle = document.getElementById("albumViewerTitle");
+        var albumViewerCrumb = document.getElementById("albumViewerCrumb");
+        var albumBack = document.getElementById("albumBack");
+        var albumClose = document.getElementById("albumClose");
+
+        var lightbox = document.getElementById("lightbox");
+        var lbImg = lightbox.querySelector("img");
+        var lbCaption = lightbox.querySelector(".lb-caption");
+        var lbClose = lightbox.querySelector(".lb-close");
+        var lbPrev = lightbox.querySelector(".lb-nav.prev");
+        var lbNext = lightbox.querySelector(".lb-nav.next");
+
+        var currentAlbum = null;
+        var currentIndex = 0;
+
+        // ---------- Render album cover cards ----------
+        ALBUMS.forEach(function (album, i) {
+          var col = document.createElement("div");
+          col.className = "col-md-6 col-lg-4 album-card";
+          col.style.animationDelay = (i * 0.08) + "s";
+          col.setAttribute("data-album", album.id);
+          col.innerHTML =
+            '<div class="img-card" style="height:280px;position:relative">' +
+              '<span class="album-count-badge"><i class="fa-solid fa-images"></i>' + album.photos.length + ' Photos</span>' +
+              '<img src="' + album.photos[0].src + '" alt="' + album.name + '">' +
+              '<div class="overlay"><div><h5>' + album.name + '</h5><p>Tap to view album</p></div></div>' +
+            '</div>';
+          col.addEventListener("click", function () {
+            openAlbum(album.id);
+          });
+          albumGrid.appendChild(col);
+        });
+
+        // ---------- Switch from album list to album detail (same page, like navigating) ----------
+        function openAlbum(albumId) {
+          var album = ALBUMS.filter(function (a) { return a.id === albumId; })[0];
+          if (!album) return;
+          currentAlbum = album;
+
+          albumViewerTitle.textContent = album.name;
+          albumViewerCrumb.textContent = album.name;
+
+          albumViewerGrid.innerHTML = "";
+          album.photos.forEach(function (photo, idx) {
+            var item = document.createElement("div");
+            item.className = "av-item";
+            item.innerHTML = '<img src="' + photo.src + '" alt="' + photo.caption + '">';
+            item.addEventListener("click", function () {
+              openLightbox(idx);
+            });
+            albumViewerGrid.appendChild(item);
+          });
+
+          defaultView.style.display = "none";
+          detailView.style.display = "block";
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+
+        function closeAlbum(e) {
+          if (e) e.preventDefault();
+          detailView.style.display = "none";
+          defaultView.style.display = "block";
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+
+        albumBack.addEventListener("click", closeAlbum);
+        albumClose.addEventListener("click", closeAlbum);
+
+        // ---------- Single-image lightbox with prev/next inside current album ----------
+        function openLightbox(index) {
+          if (!currentAlbum) return;
+          currentIndex = index;
+          updateLightbox();
+          lightbox.classList.add("show");
+        }
+
+        function updateLightbox() {
+          var photo = currentAlbum.photos[currentIndex];
+          lbImg.src = photo.src;
+          lbImg.alt = photo.caption;
+          lbCaption.textContent = photo.caption;
+        }
+
+        function closeLightbox() {
+          lightbox.classList.remove("show");
+        }
+
+        function showPrev() {
+          if (!currentAlbum) return;
+          currentIndex = (currentIndex - 1 + currentAlbum.photos.length) % currentAlbum.photos.length;
+          updateLightbox();
+        }
+
+        function showNext() {
+          if (!currentAlbum) return;
+          currentIndex = (currentIndex + 1) % currentAlbum.photos.length;
+          updateLightbox();
+        }
+
+        lbClose.addEventListener("click", closeLightbox);
+        lbPrev.addEventListener("click", showPrev);
+        lbNext.addEventListener("click", showNext);
+        lightbox.addEventListener("click", function (e) {
+          if (e.target === lightbox) closeLightbox();
+        });
+
+        document.addEventListener("keydown", function (e) {
+          if (lightbox.classList.contains("show")) {
+            if (e.key === "Escape") closeLightbox();
+            if (e.key === "ArrowLeft") showPrev();
+            if (e.key === "ArrowRight") showNext();
+          } else if (detailView.style.display === "block" && e.key === "Escape") {
+            closeAlbum();
+          }
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
