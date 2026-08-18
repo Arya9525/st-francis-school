@@ -330,11 +330,12 @@
     });
 
     document.querySelectorAll("[data-gallery]").forEach(function (grid) {
-      grid.querySelectorAll("[data-src]").forEach(function (el) {
-        items.push({ src: el.getAttribute("data-src"), caption: el.getAttribute("data-caption") || "" });
-        el.addEventListener("click", function () { open(items.length - 1); });
-      });
-    });
+  grid.querySelectorAll("[data-src]").forEach(function (el) {
+    var i = items.length;
+    items.push({ src: el.getAttribute("data-src"), caption: el.getAttribute("data-caption") || "" });
+    el.addEventListener("click", function () { open(i); });
+  });
+});
   });
 
   /* ---------- Gallery / Notice filters ---------- */
