@@ -723,8 +723,16 @@ p { color: var(--muted); }
 .footer-map { border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,.15); } */
 
 /* ============ Footer ============ */
-.footer { background: var(--grad-navy); color: rgba(255,255,255,.75); padding: 0 0 0; position: relative; overflow: hidden; }
-.footer::before {
+.footer {
+  background: var(--grad-navy);
+  color: rgba(255,255,255,.75);
+  padding: 0 0 0;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  clear: both;
+  margin-top: clamp(40px, 6vw, 70px);
+}.footer::before {
   content: ""; position: absolute; top: -120px; right: -120px; width: 340px; height: 340px; border-radius: 50%;
   background: radial-gradient(circle, rgba(233,184,76,.18), transparent 70%);
 }
