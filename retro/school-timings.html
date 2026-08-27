@@ -1,165 +1,804 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <script>
 (function () {
   document.addEventListener("click", function (e) {
-    var el = e.target && e.target.closest ? e.target.closest("[data-theme-toggle]") : null;
+    var el = e.target && e.target.closest
+      ? e.target.closest("[data-theme-toggle]")
+      : null;
+
     if (!el) return;
-    var next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+
+    var next =
+      document.documentElement.getAttribute("data-theme") === "dark"
+        ? "light"
+        : "dark";
+
     document.documentElement.setAttribute("data-theme", next);
+
     var icons = document.querySelectorAll("[data-theme-toggle] i");
-    for (var i = 0; i < icons.length; i++) icons[i].className = next === "dark" ? "fa-solid fa-sun" : "fa-solid fa-moon";
+
+    for (var i = 0; i < icons.length; i++) {
+      icons[i].className =
+        next === "dark"
+          ? "fa-solid fa-sun"
+          : "fa-solid fa-moon";
+    }
   });
 })();
 </script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>School Timings | St. Francis Secondary School</title>
-  <meta name="description" content="Arrival and departure timings for Summer and Winter sessions at St. Francis Secondary School, Sadabad, across Pre-Primary and Classes I-VIII.">
-  <link rel="icon" type="image/svg+xml" href="assets/img/logo.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.16/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/theme-retro.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>School Timings | St. Francis Secondary School</title>
+
+<meta
+  name="description"
+  content="Arrival and departure timings for Summer and Winter sessions at St. Francis Secondary School, Sadabad, across Pre-Primary and Classes I-VIII."
+>
+
+<link rel="icon" type="image/svg+xml" href="assets/img/logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+  rel="stylesheet"
+>
+
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+>
+
+<link
+  href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.16/dist/tailwind.min.css"
+  rel="stylesheet"
+>
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+>
+
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/theme-retro.css">
+
+
+<style>
+
+/* =========================================================
+   SCHOOL TIMINGS PAGE ONLY
+   TABLE CARD HOVER / JUMP FIX
+   ========================================================= */
+
+/*
+   Main table card ko completely stable rakha gaya hai.
+   Ye sirf timing-table-panel ke cards ko affect karega.
+*/
+
+.timing-table-panel .card-premium {
+  transform: none !important;
+  transition: none !important;
+}
+
+/*
+   Mouse hover karne par card upar/neeche move nahi karega.
+*/
+
+.timing-table-panel .card-premium:hover {
+  transform: none !important;
+  transition: none !important;
+}
+
+/*
+   Kisi parent reveal/stagger animation se transform
+   aaye tab bhi table card stable rahe.
+*/
+
+.timing-table-panel {
+  transform: none !important;
+}
+
+.timing-table-panel .card-premium {
+  transform: none !important;
+}
+
+/*
+   Table ke andar rows/cells ko bhi movement nahi milega.
+*/
+
+.timing-table-panel .table-premium tr,
+.timing-table-panel .table-premium tr:hover,
+.timing-table-panel .table-premium td,
+.timing-table-panel .table-premium th {
+  transform: none !important;
+}
+
+/*
+   Table panel visible hone ke waqt koi animation
+   nahi chalegi.
+*/
+
+.timing-table-panel {
+  animation: none !important;
+}
+
+/*
+   Sirf table cards ki transition remove ki hai.
+   Baaki website ki transitions untouched hain.
+*/
+
+.timing-table-panel .card-premium,
+.timing-table-panel .card-premium:hover {
+  box-shadow: var(--shadow-md);
+}
+
+
+/* =========================================================
+   MOBILE TABLE FIX
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+
+  .timing-table-panel .card-premium {
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .timing-table-panel .card-premium:hover {
+    transform: none !important;
+  }
+
+  .timing-table-panel {
+    transform: none !important;
+    animation: none !important;
+  }
+
+}
+
+</style>
+
 </head>
+
 <body>
 
-  <header data-component></header>
+<header data-component></header>
 
-  <main>
-    <section class="page-hero">
-      <div class="bg" style="background-image:url('assets/img/banner-image.jpeg')"></div>
-      <div class="container">
-        <h1 class="reveal">School Timings</h1>
-        <div class="crumbs reveal delay-1 mt-4"><a href="index.html">Home</a><span class="sep">/</span><span>School Timings</span></div>
+<main>
+
+  <!-- =====================================================
+       PAGE HERO
+       ===================================================== -->
+
+  <section class="page-hero">
+
+    <div
+      class="bg"
+      style="background-image:url('assets/img/banner-image.jpeg')"
+    ></div>
+
+    <div class="container">
+
+      <h1 class="reveal">
+        School Timings
+      </h1>
+
+      <div class="crumbs reveal delay-1 mt-4">
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <span class="sep">
+          /
+        </span>
+
+        <span>
+          School Timings
+        </span>
+
       </div>
-    </section>
 
-    <!-- Overview strip -->
-    <section class="section" id="overview">
-      <div class="container">
-        <div class="section-head text-center">
-          <span class="eyebrow justify-content-center">Daily Schedule</span>
-          <h2 class="section-title">Arrival &amp; Departure <span class="g">Timings</span></h2>
-<!-- <p class="section-sub mb-0" style="text-align:center !important">Click a session below to view its timing table.</p> -->
- </div>
-        <div class="row g-4 justify-content-center">
-          <div class="col-md-6 col-lg-3 reveal">
-            <div class="card-premium feature-card h-100 text-center timing-toggle-card" data-timing-target="summerTimings" style="cursor:pointer">
-              <div class="card-icon mx-auto"><i class="fa-solid fa-sun"></i></div>
-              <h5>Summer Session</h5>
-              <p class="small mb-0">Applicable from April to September.</p>
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       OVERVIEW
+       ===================================================== -->
+
+  <section class="section" id="overview">
+
+    <div class="container">
+
+      <div class="section-head text-center">
+
+        <span class="eyebrow justify-content-center">
+          Daily Schedule
+        </span>
+
+        <h2 class="section-title">
+          Arrival &amp; Departure
+          <span class="g">
+            Timings
+          </span>
+        </h2>
+
+      </div>
+
+
+      <div class="row g-4 justify-content-center">
+
+
+        <!-- SUMMER SESSION -->
+
+        <div class="col-md-6 col-lg-3 reveal">
+
+          <div
+            class="card-premium feature-card h-100 text-center timing-toggle-card"
+            data-timing-target="summerTimings"
+            style="cursor:pointer"
+          >
+
+            <div class="card-icon mx-auto">
+
+              <i class="fa-solid fa-sun"></i>
+
             </div>
+
+            <h5>
+              Summer Session
+            </h5>
+
+            <p class="small mb-0">
+              Applicable from April to September.
+            </p>
+
           </div>
-          <div class="col-md-6 col-lg-3 reveal delay-1">
-            <div class="card-premium feature-card h-100 text-center timing-toggle-card" data-timing-target="winterTimings" style="cursor:pointer">
-              <div class="card-icon mx-auto"><i class="fa-solid fa-snowflake"></i></div>
-              <h5>Winter Session</h5>
-              <p class="small mb-0">Applicable from October to March.</p>
-            </div>
-          </div>
-          <!-- <div class="col-md-6 col-lg-3 reveal delay-2"><div class="card-premium feature-card h-100 text-center"><div class="card-icon mx-auto"><i class="fa-solid fa-bus"></i></div><h5>Transport Arrival</h5><p class="small mb-0">Buses reach 15 minutes before school time.</p></div></div> -->
-          <!-- <div class="col-md-6 col-lg-3 reveal delay-3"><div class="card-premium feature-card h-100 text-center"><div class="card-icon mx-auto"><i class="fa-solid fa-calendar-week"></i></div><h5>Saturday Schedule</h5><p class="small mb-0">Shorter hours every Saturday.</p></div></div> -->
+
         </div>
-      </div>
-    </section>
 
-    <!-- Timing tables -->
-    <section class="section section-alt" id="timings">
-      <div class="container">
-        <div class="row g-4 justify-content-center" data-stagger>
-          <div class="col-lg-8 timing-table-panel" id="summerTimings" style="display:none">
-            <div class="card-premium p-4 h-100">
-              <h4 class="mb-3"><i class="fa-solid fa-sun text-primary me-2"></i>Summer Timings</h4>
-              <div class="table-responsive">
-                <table class="table-premium">
-                  <thead><tr><th>Class</th><th>Arrival Time</th><th>Departure Time</th></tr></thead>
-                  <tbody>
-                    <tr><td>Pre-Primary</td><td>07:30 AM</td><td>12:30 PM</td></tr>
-                    <tr><td>Pre-Primary (Sat)</td><td>07:30 AM</td><td>10:30 AM</td></tr>
-                    <tr><td>Class I – VIII</td><td>07:30 AM</td><td>01:30 PM</td></tr>
-                    <tr><td>Class I – VIII (Sat)</td><td>07:30 AM</td><td>11:30 AM</td></tr>
-                  </tbody>
-                </table>
-              </div>
-              <p class="small text-muted mt-3 mb-0">Applicable from April through September.</p>
+
+        <!-- WINTER SESSION -->
+
+        <div class="col-md-6 col-lg-3 reveal delay-1">
+
+          <div
+            class="card-premium feature-card h-100 text-center timing-toggle-card"
+            data-timing-target="winterTimings"
+            style="cursor:pointer"
+          >
+
+            <div class="card-icon mx-auto">
+
+              <i class="fa-solid fa-snowflake"></i>
+
             </div>
+
+            <h5>
+              Winter Session
+            </h5>
+
+            <p class="small mb-0">
+              Applicable from October to March.
+            </p>
+
           </div>
-          <div class="col-lg-8 timing-table-panel" id="winterTimings" style="display:none">
-            <div class="card-premium p-4 h-100">
-              <h4 class="mb-3"><i class="fa-solid fa-snowflake text-primary me-2"></i>Winter Timings</h4>
-              <div class="table-responsive">
-                <table class="table-premium">
-                  <thead><tr><th>Class</th><th>Arrival Time</th><th>Departure Time</th></tr></thead>
-                  <tbody>
-                    <tr><td>Pre-Primary</td><td>08:30 AM</td><td>01:30 PM</td></tr>
-                    <tr><td>Pre-Primary (Sat)</td><td>08:30 AM</td><td>11:30 AM</td></tr>
-                    <tr><td>Class I – VIII</td><td>08:30 AM</td><td>02:30 PM</td></tr>
-                    <tr><td>Class I – VIII (Sat)</td><td>08:30 AM</td><td>12:30 PM</td></tr>
-                  </tbody>
-                </table>
-              </div>
-              <p class="small text-muted mt-3 mb-0">Applicable from October through March.</p>
-            </div>
-          </div>
+
         </div>
-      </div>
-    </section>
 
-    <!-- Note -->
-    <section class="section" id="note">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <div class="glass-card text-center reveal-zoom">
-              <p class="mb-0"><i class="fa-solid fa-circle-info text-primary me-2"></i>Timings are subject to change based on the school calendar and government notices. Parents are advised to check the Notice Board regularly for updates.</p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       TIMING TABLES
+       IMPORTANT:
+       data-stagger removed
+       ===================================================== -->
+
+  <section
+    class="section section-alt"
+    id="timings"
+  >
+
+    <div class="container">
+
+      <!-- data-stagger REMOVED intentionally -->
+
+      <div class="row g-4 justify-content-center">
+
+
+        <!-- =================================================
+             SUMMER TIMINGS
+             ================================================= -->
+
+        <div
+          class="col-lg-8 timing-table-panel"
+          id="summerTimings"
+          style="display:none"
+        >
+
+          <!--
+            This card is intentionally kept stable.
+            No reveal class.
+            No stagger.
+          -->
+
+          <div class="card-premium p-4 h-100">
+
+            <h4 class="mb-3">
+
+              <i
+                class="fa-solid fa-sun text-primary me-2"
+              ></i>
+
+              Summer Timings
+
+            </h4>
+
+
+            <div class="table-responsive">
+
+              <table class="table-premium">
+
+                <thead>
+
+                  <tr>
+
+                    <th>
+                      Class
+                    </th>
+
+                    <th>
+                      Arrival Time
+                    </th>
+
+                    <th>
+                      Departure Time
+                    </th>
+
+                  </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                  <tr>
+
+                    <td>
+                      Pre-Primary
+                    </td>
+
+                    <td>
+                      07:30 AM
+                    </td>
+
+                    <td>
+                      12:30 PM
+                    </td>
+
+                  </tr>
+
+
+                  <tr>
+
+                    <td>
+                      Pre-Primary (Sat)
+                    </td>
+
+                    <td>
+                      07:30 AM
+                    </td>
+
+                    <td>
+                      10:30 AM
+                    </td>
+
+                  </tr>
+
+
+                  <tr>
+
+                    <td>
+                      Class I – VIII
+                    </td>
+
+                    <td>
+                      07:30 AM
+                    </td>
+
+                    <td>
+                      01:30 PM
+                    </td>
+
+                  </tr>
+
+
+                  <tr>
+
+                    <td>
+                      Class I – VIII (Sat)
+                    </td>
+
+                    <td>
+                      07:30 AM
+                    </td>
+
+                    <td>
+                      11:30 AM
+                    </td>
+
+                  </tr>
+
+                </tbody>
+
+              </table>
+
             </div>
+
+
+            <p class="small text-muted mt-3 mb-0">
+
+              Applicable from April through September.
+
+            </p>
+
           </div>
+
         </div>
+
+
+        <!-- =================================================
+             WINTER TIMINGS
+             ================================================= -->
+
+        <div
+          class="col-lg-8 timing-table-panel"
+          id="winterTimings"
+          style="display:none"
+        >
+
+          <div class="card-premium p-4 h-100">
+
+            <h4 class="mb-3">
+
+              <i
+                class="fa-solid fa-snowflake text-primary me-2"
+              ></i>
+
+              Winter Timings
+
+            </h4>
+
+
+            <div class="table-responsive">
+
+              <table class="table-premium">
+
+                <thead>
+
+                  <tr>
+
+                    <th>
+                      Class
+                    </th>
+
+                    <th>
+                      Arrival Time
+                    </th>
+
+                    <th>
+                      Departure Time
+                    </th>
+
+                  </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                  <tr>
+
+                    <td>
+                      Pre-Primary
+                    </td>
+
+                    <td>
+                      08:30 AM
+                    </td>
+
+                    <td>
+                      01:30 PM
+                    </td>
+
+                  </tr>
+
+
+                  <tr>
+
+                    <td>
+                      Pre-Primary (Sat)
+                    </td>
+
+                    <td>
+                      08:30 AM
+                    </td>
+
+                    <td>
+                      11:30 AM
+                    </td>
+
+                  </tr>
+
+
+                  <tr>
+
+                    <td>
+                      Class I – VIII
+                    </td>
+
+                    <td>
+                      08:30 AM
+                    </td>
+
+                    <td>
+                      02:30 PM
+                    </td>
+
+                  </tr>
+
+
+                  <tr>
+
+                    <td>
+                      Class I – VIII (Sat)
+                    </td>
+
+                    <td>
+                      08:30 AM
+                    </td>
+
+                    <td>
+                      12:30 PM
+                    </td>
+
+                  </tr>
+
+                </tbody>
+
+              </table>
+
+            </div>
+
+
+            <p class="small text-muted mt-3 mb-0">
+
+              Applicable from October through March.
+
+            </p>
+
+          </div>
+
+        </div>
+
+
       </div>
-    </section>
-  </main>
 
-  <footer data-component></footer>
+    </div>
 
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
-    <span class="lb-close">&times;</span>
-    <span class="lb-nav prev">&#10094;</span>
-    <img src="" alt="Gallery image">
-    <span class="lb-nav next">&#10095;</span>
-    <div class="lb-caption"></div>
-  </div>
+  </section>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/components.js"></script>
-  <script src="assets/js/main.js"></script>
 
-  <!-- Timing card toggle logic: shows the relevant table only after a card is clicked -->
-  <script>
-    (function () {
-      document.addEventListener("DOMContentLoaded", function () {
-        var cards = document.querySelectorAll(".timing-toggle-card");
-        cards.forEach(function (card) {
-          card.addEventListener("click", function () {
-            cards.forEach(function (c) { c.classList.remove("active"); });
-            card.classList.add("active");
+  <!-- =====================================================
+       NOTE
+       ===================================================== -->
 
-            document.querySelectorAll(".timing-table-panel").forEach(function (panel) {
-              panel.style.display = "none";
+  <section
+    class="section"
+    id="note"
+  >
+
+    <div class="container">
+
+      <div class="row justify-content-center">
+
+        <div class="col-lg-8">
+
+          <div
+            class="glass-card text-center reveal-zoom"
+          >
+
+            <p class="mb-0">
+
+              <i
+                class="fa-solid fa-circle-info text-primary me-2"
+              ></i>
+
+              Timings are subject to change based on the school
+              calendar and government notices. Parents are advised
+              to check the Notice Board regularly for updates.
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer data-component></footer>
+
+
+<!-- =====================================================
+     LIGHTBOX
+     ===================================================== -->
+
+<div
+  class="lightbox"
+  id="lightbox"
+  role="dialog"
+  aria-modal="true"
+>
+
+  <span class="lb-close">
+    &times;
+  </span>
+
+  <span class="lb-nav prev">
+    &#10094;
+  </span>
+
+  <img
+    src=""
+    alt="Gallery image"
+  >
+
+  <span class="lb-nav next">
+    &#10095;
+  </span>
+
+  <div class="lb-caption"></div>
+
+</div>
+
+
+<!-- =====================================================
+     SCRIPTS
+     ===================================================== -->
+
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+></script>
+
+<script src="assets/js/components.js"></script>
+
+<script src="assets/js/main.js"></script>
+
+
+<!-- =====================================================
+     TIMING CARD TOGGLE LOGIC
+     LOGIC SAME — ONLY TABLE ANIMATION REMOVED
+     ===================================================== -->
+
+<script>
+
+(function () {
+
+  document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+      var cards =
+        document.querySelectorAll(
+          ".timing-toggle-card"
+        );
+
+
+      cards.forEach(function (card) {
+
+        card.addEventListener(
+          "click",
+          function () {
+
+            /*
+             * Active state
+             */
+
+            cards.forEach(function (c) {
+
+              c.classList.remove("active");
+
             });
 
-            var targetId = card.getAttribute("data-timing-target");
-            var target = document.getElementById(targetId);
-            if (target) target.style.display = "block";
-          });
-        });
+            card.classList.add("active");
+
+
+            /*
+             * Hide both timing panels
+             */
+
+            document
+              .querySelectorAll(
+                ".timing-table-panel"
+              )
+              .forEach(function (panel) {
+
+                panel.style.display = "none";
+
+              });
+
+
+            /*
+             * Show selected timing table
+             */
+
+            var targetId =
+              card.getAttribute(
+                "data-timing-target"
+              );
+
+            var target =
+              document.getElementById(
+                targetId
+              );
+
+
+            if (target) {
+
+              target.style.display = "block";
+
+              /*
+               * Force stable position after display.
+               * This prevents any transform inherited
+               * from other animation classes/scripts.
+               */
+
+              target.style.transform = "none";
+
+              var tableCard =
+                target.querySelector(
+                  ".card-premium"
+                );
+
+              if (tableCard) {
+
+                tableCard.style.transform = "none";
+
+              }
+
+            }
+
+          }
+        );
+
       });
-    })();
-  </script>
+
+    }
+  );
+
+})();
+
+</script>
+
 </body>
 </html>
