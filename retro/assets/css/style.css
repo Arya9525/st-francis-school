@@ -1446,3 +1446,46 @@ h1, h2, h3, h4, h5, h6 { letter-spacing: -.015em; }
   }
 }
 
+/* Academic Excellence statistic cards */
+#results .glass-card {
+    background: #4A0E1E;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: none;
+}
+
+/* Main numbers */
+#results .glass-card .fs-1 {
+    color: #ffffff !important;
+}
+
+/* Labels */
+#results .glass-card small {
+    color: rgba(255, 255, 255, 0.75) !important;
+}
+
+/* ============ Academic Excellence eyebrow ============ */
+#results .eyebrow {
+    position: absolute;
+    top: -40px;
+    left: 20px;
+
+    background: rgba(255, 255, 255, 0.88);
+    color: var(--royal-2);
+
+    border: 2px dashed var(--royal-2);
+    border-radius: 10px;
+
+    padding: 10px 18px;
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+
+    z-index: 5;
+}
+
+/* Mission & Vision paragraph text */
+.col-lg-7.reveal-right p.mb-3 {
+    color: #3b3030 !important;
+}
