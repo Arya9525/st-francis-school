@@ -42,7 +42,7 @@ var LOGO = '<img src="assets/img/logo.png" alt="St. Francis Secondary School Log
       '<div class="topbar">',
       '<div class="container d-flex flex-wrap align-items-center justify-content-between gap-2">',
       '<div class="topbar-left d-flex align-items-center gap-2">',
-      '<span class="topbar-crest">' + LOGO + "</span>",
+      // '<span class="topbar-crest">' + LOGO + "</span>",
       '<span class="topbar-title"><b>' + SITE.name + '</b><small>CBSE Affiliated · Est. 2018 · ' + SITE.schoolCode + "</small></span>",
       "</div>",
       '<div class="topbar-right d-flex align-items-center gap-3 flex-wrap">',
@@ -251,7 +251,7 @@ var LOGO = '<img src="assets/img/logo.png" alt="St. Francis Secondary School Log
 
       '<div class="footer-bottom d-flex flex-wrap justify-content-between gap-2">',
       "<span>&copy; 2026 St. Francis Secondary School. All Rights Reserved.</span>",
-      '<span><a href="#" class="text-white-50">Privacy Policy</a> · <a href="#" class="text-white-50">Terms of Use</a> · <a href="sitemap.html" class="text-white-50">Sitemap</a></span>',
+      // '<span><a href="#" class="text-white-50">Privacy Policy</a> · <a href="#" class="text-white-50">Terms of Use</a> · <a href="sitemap.html" class="text-white-50">Sitemap</a></span>',
       "</div>",
       "</div></footer>"
     ].join("");
