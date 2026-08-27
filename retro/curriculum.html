@@ -39,6 +39,21 @@
       border-top: 1px dashed var(--border);
       margin: 0 0 36px;
     }
+
+    /* Bade card pe hover-lift halka rakha, poori tarah hataya nahi */
+    .curriculum-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      transition: transform .5s ease, box-shadow .5s ease;
+    }
+
+    /* Reveal animation bhi halka rakha — sirf fade, translateY hataya
+       (translateY hi jitter ka main reason tha jab bada card baar-baar
+       viewport threshold cross karta tha) */
+    .curriculum-card.reveal {
+      transform: none !important;
+      transition: opacity .8s ease !important;
+    }
   </style>
 </head>
 <body>
@@ -60,7 +75,7 @@
           <div class="col-lg-10">
 
             <!-- Single combined card: Syllabus/Exam Promotion + Exam + Promotion -->
-            <div class="card-premium p-4 p-lg-5 reveal">
+            <div class="card-premium curriculum-card p-4 p-lg-5 reveal">
 
               <div class="curriculum-section">
                 <h4 class="mb-4"><i class="fa-solid fa-diamond text-danger me-2" style="font-size:12px"></i>Syllabus/Exam Promotion</h4>
